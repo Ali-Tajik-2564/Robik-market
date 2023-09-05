@@ -1,0 +1,19 @@
+:root {
+  --dark-color: #27374d;
+  --main-color: #526d81;
+  --text-color: #9db2bf;
+  --shadow-color: #dde6ed;
+}
+@font-face {
+  font-family: IranSans;
+  src: url(fonts/IRANSans/IRANSans_Black.ttf);
+  src: url(fonts/IRANSans/IRANSans.ttf);
+  src: url(fonts/IRANSans/IRANSans_Medium.ttf);
+  src: url(fonts/IRANSans/IRANSans_Bold.ttf);
+}
+* {
+  margin: 0;
+  font-family: IranSans, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
