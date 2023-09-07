@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./MainHeaders.css"
 import { HiShoppingCart } from "react-icons/hi"
 import { BiSearch } from "react-icons/bi"
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { AiOutlineMenu } from "react-icons/ai"
 import { IoIosArrowDown } from "react-icons/io"
 export default function MainHeaders() {
+
     return (
         <>
             <div className="top">
@@ -38,7 +39,65 @@ export default function MainHeaders() {
                         <IoIosArrowDown className='down-icon' />
                         گروه های محصولات
                         <AiOutlineMenu className='menu-icon' />
-                        <div className='hidden-menu hidden-groups'></div>
+                        <div className='hidden-menu hidden-groups'>
+                            <div className="columns first-column">
+                                <ul className="columns-list column-one-list" >
+                                    <li className='columns-lins__item head-list '>کالای دیجیتال</li>
+                                    <li className='columns-lins__item column-one-list__items'>
+                                        <Link>
+
+                                            مد و پوشاک
+                                        </Link> </li>
+                                    <li className='columns-lins__item column-one-list__items'> <Link>فرهنگ و هنر</Link>
+                                    </li>
+                                    <li className='columns-lins__item column-one-list__items'> <Link>لوازم منزل </Link>
+                                    </li>
+                                    <li className='columns-lins__item column-one-list__items'> <Link>سلامت و زیبایی</Link>
+                                    </li>
+                                    <li className='columns-lins__item column-one-list__items'> <Link>جواهرات</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="columns">
+                                <ul className="columns-list">
+                                    <li className='columns-lins__item head-list'>صوت</li>
+                                    <li className='columns-lins__item'><Link>رایو دیجیتال</Link></li>
+                                    <li className='columns-lins__item'><Link>ضبط صوت</Link></li>
+                                    <li className='columns-lins__item'><Link>اسپیکر </Link></li>
+                                    <li className='columns-lins__item'><Link>هدفون</Link></li>
+                                    <li className='columns-lins__item'><Link>میکروفون</Link></li>
+                                </ul>
+                                <ul className="columns-list">
+                                    <li className='columns-lins__item head-list'>موبایل</li>
+                                    <li className='columns-lins__item'><Link>گوشی موبایل</Link></li>
+                                    <li className='columns-lins__item'><Link>تبلت</Link></li>
+                                    <li className='columns-lins__item'><Link>کیف و کاور</Link></li>
+                                    <li className='columns-lins__item'><Link>جانبی موبایل</Link></li>
+                                </ul>
+                            </div>
+                            <div className="columns">
+                                <ul className="columns-list">
+                                    <li className='columns-lins__item head-list'>تصویر</li>
+                                    <li className='columns-lins__item'><Link>ال سی دی</Link></li>
+                                    <li className='columns-lins__item'><Link>تلویزیون</Link></li>
+                                    <li className='columns-lins__item'><Link>گیرنده دیجیتال</Link></li>
+
+                                </ul>
+                                <ul className="columns-list">
+                                    <li className='columns-lins__item head-list'>کنسول بازی</li>
+                                    <li className='columns-lins__item'><Link>پلی استیشن 4</Link></li>
+                                    <li className='columns-lins__item'><Link>پلی استیشن 3</Link></li>
+                                    <li className='columns-lins__item'><Link>پلی استیشن 2</Link></li>
+                                    <li className='columns-lins__item'><Link>ایکس باکس 360</Link></li>
+                                    <li className='columns-lins__item'><Link>نینتندو</Link></li>
+                                    <li className='columns-lins__item'><Link>بازی های کامپیوتری</Link></li>
+                                </ul>
+
+                            </div>
+                            <div className="columns">
+                                <img src="./images/megamenu-image1.png" className='hidden-groups__img' />
+                            </div>
+                        </div>
                     </li>
                     <li className='main-menu '>
                         درباره ما
@@ -205,7 +264,7 @@ export default function MainHeaders() {
                     </li>
                 </ul>
 
-            </div>
+            </div >
         </>
     )
 }

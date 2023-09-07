@@ -3,7 +3,7 @@ import "./TopBar.css"
 import { Link } from 'react-router-dom'
 export default function TopBar() {
     return (
-        <div className="container">
+        <div className="topbar-container">
             <span className='phone-number'>شماره تماس و مشاوره :‌09195729509 </span>
             <ul className='access-container'>
                 <li>
