@@ -6,6 +6,10 @@
 </head>
 <body>
     <h1>Hello</h1>
+    <form action="dbconfig/api.php" method="get">
+        <input name="id" type="text" placeholder="user id">
+        <input name="sub" type="submit" value="see result">
+    </form>
     
 </body>
 </html>
