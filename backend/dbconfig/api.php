@@ -2,23 +2,26 @@
 
 header("Content-Type:application/json");
 
-if (isset($_GET['sub'])) {
+if (isset($_GET)) {
 
     include('database.php');
-    $id = $_GET['id'];
-    $result = $con->prepare("SELECT * FROM `user` WHERE id=$id ");
+    
+    $result = $con->prepare("SELECT * FROM `user` ");
     $result->execute();
-    $data = $result->fetch(PDO::FETCH_ASSOC);
+    $datas = $result->fetchAll(PDO::FETCH_ASSOC);
 
-    $name = $data['name'];
-    $password = $data['password'];
-    $email = $data['email'];
-    $phone_number = $data['phone number'];
-    $home_number = $data['home number'];
-    $national_code = $data['national code'];
-    $card_number = $data['card number'];
-    $birth_date = $data['birth date'];
-    response($id, $name, $password, $email, $phone_number, $home_number, $national_code, $card_number, $birth_date);
+
+    foreach ($datas as $data) {
+        $name = $data['name'];
+        $password = $data['password'];
+        $email = $data['email'];
+        $phone_number = $data['phone number'];
+        $home_number = $data['home number'];
+        $national_code = $data['national code'];
+        $card_number = $data['card number'];
+        $birth_date = $data['birth date'];
+        response($id, $name, $password, $email, $phone_number, $home_number, $national_code, $card_number, $birth_date);
+    }
 } else {
     response(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 200, "No Record Found");
 }
