@@ -18,8 +18,8 @@ export default function Index() {
                 <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"}  >
 
                     <p className='product-info'>
-                        <span className='product-info-item'>6.000.000 تومان</span>
-                        <span className='product-info-item'> (۱۲ رای دهنده)
+                        <span className='product-info-item '>6.000.000 تومان</span>
+                        <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
                             <BsStarFill />
                             <BsStarFill />
                             <BsStarFill />
@@ -36,7 +36,7 @@ export default function Index() {
 
                     <p className='product-info'>
                         <span className='product-info-item'>6.000.000 تومان</span>
-                        <span className='product-info-item'>   (۱۲ رای دهنده)
+                        <span className='product-info-item flex justify-end'>   (۱۲ رای دهنده)
                             <BsStarFill />
                             <BsStarFill />
                             <BsStarFill />
@@ -53,7 +53,7 @@ export default function Index() {
 
                     <p className='product-info'>
                         <span className='product-info-item'>6.000.000 تومان</span>
-                        <span className='product-info-item'>    (۱۲ رای دهنده)
+                        <span className='product-info-item  flex justify-end'>    (۱۲ رای دهنده)
                             <BsStarFill />
                             <BsStarFill />
                             <BsStarFill />
