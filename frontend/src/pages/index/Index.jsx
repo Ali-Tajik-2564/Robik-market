@@ -20,14 +20,14 @@ export default function Index() {
                 <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
 
                     <p className='product-info'>
-                        <span className='product-info-item '>6.000.000 تومان</span>
+                        <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
                         <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
-                            <BsStarFill />
-                            <BsStarFill />
-                            <BsStarFill />
-                            <BsStarFill />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
 
-                            <BsStarHalf />
+                            <BsStarHalf className="text-yellow-400" />
 
                         </span >
 
@@ -37,14 +37,14 @@ export default function Index() {
                 <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
 
                     <p className='product-info'>
-                        <span className='product-info-item'>6.000.000 تومان</span>
+                        <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
                         <span className='product-info-item flex justify-end'>   (۱۲ رای دهنده)
-                            <BsStarFill />
-                            <BsStarFill />
-                            <BsStarFill />
-                            <BsStarFill />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
 
-                            <BsStarHalf />
+                            <BsStarHalf className="text-yellow-400" />
 
                         </span >
 
@@ -54,14 +54,14 @@ export default function Index() {
                 <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
 
                     <p className='product-info'>
-                        <span className='product-info-item'>6.000.000 تومان</span>
+                        <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
                         <span className='product-info-item  flex justify-end'>    (۱۲ رای دهنده)
-                            <BsStarFill />
-                            <BsStarFill />
-                            <BsStarFill />
-                            <BsStarFill />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
+                            <BsStarFill className="text-yellow-400" />
 
-                            <BsStarHalf />
+                            <BsStarHalf className="text-yellow-400" />
 
                         </span >
 
@@ -71,7 +71,7 @@ export default function Index() {
 
 
             </div >
-            <div className=' w-full bg-neutral-50 p-2 m-0 h-auto  '>
+            <div className=' w-full bg-neutral-100 p-2 m-0 h-auto  '>
 
                 <Title title="فروش ویژه" subTitle="محصولات دارای تخفیف ویژه به مدت محدود" />
                 <div className='w-full my-6 flex justify-evenly items-center'>
@@ -79,14 +79,14 @@ export default function Index() {
 
                         <p className='product-info'>
                             <span className='absolute top-1 right-1  text-white bg-pink-500 font-thin rounded-lg p-1 '>تخفیف ویژه</span>
-                            <span className='product-info-item'>3.700.000 تومان</span>
+                            <span className='product-info-item text-yellow-400'>3.700.000 تومان</span>
                             <span className='product-info-item  flex justify-end'>    (۱۲ رای دهنده)
-                                <BsStarFill />
-                                <BsStarFill />
-                                <BsStarFill />
-                                <BsStarFill />
+                                <BsStarFill className="text-yellow-400" />
+                                <BsStarFill className="text-yellow-400" />
+                                <BsStarFill className="text-yellow-400" />
+                                <BsStarFill className="text-yellow-400" />
 
-                                <BsStarHalf />
+                                <BsStarHalf className="text-yellow-400" />
 
                             </span >
 
@@ -97,24 +97,44 @@ export default function Index() {
 
                         <p className='product-info'>
                             <span className='absolute top-1 right-1  text-white bg-pink-500 font-thin rounded-lg p-1 '>تخفیف ویژه</span>
-                            <span className='product-info-item'>3.700.000 تومان</span>
-                            <span className='product-info-item  flex justify-end'>    (۱۲ رای دهنده)
-                                <BsStarFill />
-                                <BsStarFill />
-                                <BsStarFill />
-                                <BsStarFill />
+                            <span className='product-info-item text-yellow-400'>3.700.000 تومان</span>
+                            <span className='product-info-item  flex justify-end '>    (۱۲ رای دهنده)
+                                <BsStarFill className="text-yellow-400" />
+                                <BsStarFill className="text-yellow-400" />
+                                <BsStarFill className="text-yellow-400" />
+                                <BsStarFill className="text-yellow-400" />
 
-                                <BsStarHalf />
+                                <BsStarHalf className="text-yellow-400" />
 
                             </span >
 
 
                         </p>
                     </ProductBox>
-                    <OffProduct title="گوشی موبایل سامسونگ" img="side-slide1.jpg" price="۷.۰۰۰.۰۰۰" percent="32" time="3" />
+                    <OffProduct title="گوشی موبایل سامسونگ" img="megamenu-image1.png" price="۷.۰۰۰.۰۰۰" percent="32" time="3" />
                 </div>
-
             </div >
+            <div className="bg-white flex flex-row-reverse justify-evenly w-[90%] h-30 my-3 p-4 items-center border-b-2 mx-auto ">
+                <div className="flex flex-row-reverse justify-center items-center w-[20%]">
+                    <span><img src="./images/benefit1.png" alt="" className='m-2' /></span>
+                    <span>ارسال سریع و رایگان</span>
+                </div>
+                <div className="flex flex-row-reverse justify-center items-center w-[20%]">
+                    <span><img src="./images/benefit2.png" alt="" className='m-2' /></span>
+                    <span>ضمانت بازگشت وجه</span>
+                </div>
+                <div className="flex flex-row-reverse justify-center items-center w-[20%]">
+                    <span><img src="./images/benefit3.png" alt="" className='m-2' /></span>
+                    <span>ضمانت اصالت کالا
+                    </span>
+                </div>
+                <div className="flex flex-row-reverse justify-center items-center w-[20%]">
+                    <span><img src="./images/benefit4.png" alt="" className='m-2' /></span>
+                    <span>پشتیبانی 24 ساعته</span>
+                </div>
+            </div>
+
+
 
         </>
     )

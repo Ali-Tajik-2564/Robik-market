@@ -13,8 +13,7 @@ export default function Section({ names }) {
                                 {name.title}
                             </span>
                         ) : (
-                            <span className="section-items" onClick={event => setActiveLink(event.target.__reactProps$ixor9428gz
-                                .children)}>
+                            <span className="section-items" onClick={event => setActiveLink(name.title)}>
                                 {name.title}
                             </span >
                         )

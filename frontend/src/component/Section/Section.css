@@ -11,6 +11,7 @@
   font-weight: 400;
   margin: 0 0.5rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .active-link {
   border-bottom: 4px solid var(--main-color);
