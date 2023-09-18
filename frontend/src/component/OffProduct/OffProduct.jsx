@@ -10,11 +10,11 @@ export default function OffProduct({ img, title, price, percent, time }) {
                 <img src={`./images/${img}`} className='w-1/3 h-[27rem]' />
                 <div className='flex flex-col justify-start items-end w-2/3 mr-5'>
                     <h1 className="text-pink-300 mt-3 mr-4 text-2xl">محصول ویژه امروز</h1>
-                    <p className="font-thin mr-4"> فروش به مدت محدود</p>
-                    <h1 className="text-black text-3xl mt-5 font-thin mr-4">{title}</h1>
+                    <p className=" mr-4"> فروش به مدت محدود</p>
+                    <h1 className="text-black text-3xl mt-5  mr-4">{title}</h1>
                     <div className='flex flex-lg-row-reverse items-center justify-evenly my-5  w-full'>
-                        <span className='text-pink-300 text-xl font-thin ml-4 mx-3'>تومان {price}</span>
-                        <span className='mr-4 mx-3  line-through text-xl'> تومان {price}</span>
+                        <span className='text-pink-300 text-xl  ml-4 mx-3'>{price} تومان</span>
+                        <span className='mr-4 mx-3  line-through text-xl'> {price} تومان</span>
                     </div>
 
                     <span className='flex w-full justify-end overflow-visible text-yellow-400  cursor-pointer my-2 mr-4 text-xl group '>
@@ -24,7 +24,7 @@ export default function OffProduct({ img, title, price, percent, time }) {
 
                         همین حالا بخرید</span>
 
-                    <Timer date="2023, 9, 17" />
+                    <Timer date={time} />
                 </div>
             </div>
         </>

@@ -34,7 +34,7 @@ export default function MainHeaders() {
 
             </div>
             <div className="bottom">
-                <ul className="access-bar">
+                <ul className="access-bar space-x-2">
                     <li className='main-menu menu-title' >
                         <IoIosArrowDown className='down-icon' />
                         گروه های محصولات

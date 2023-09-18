@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Section.css"
 export default function Section({ names }) {
-    const [activeLink, setActiveLink] = useState("")
+    const [activeLink, setActiveLink] = useState(names[0].title)
     return (
         <div className='section-container'>
             {names.map(name => (

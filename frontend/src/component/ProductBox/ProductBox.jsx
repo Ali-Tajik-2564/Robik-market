@@ -3,8 +3,8 @@ import Card from 'react-bootstrap/Card';
 import "./ProductBox.css"
 export default function ProductBox({ img, title, children, route }) {
     return (
-        <div className='box-container ab '>
-            <Card style={{ width: '18rem', height: "22rem", display: "relative" }}>
+        <div className='box-container  '>
+            <Card style={{ width: '18rem', height: "22rem", display: "relative", backgroundColor: "#f1f5f9" }}>
                 <Card.Img variant="top" style={{ height: '50%' }} src={`images/${img}`} />
                 <Card.Body>
                     <Card.Text>
