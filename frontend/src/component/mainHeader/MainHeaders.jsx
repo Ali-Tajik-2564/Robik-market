@@ -12,7 +12,7 @@ export default function MainHeaders() {
             <div className="top">
                 <div className="logo">
                     <span className='logo-title'>روبیک مارکت</span>
-                    <img src="./images/logo.png" alt="logo" className='logo-img' />
+                    <img src="../images/logo.png" alt="logo" className='logo-img' />
                 </div>
 
                 <div className="search-box">
@@ -95,7 +95,7 @@ export default function MainHeaders() {
 
                             </div>
                             <div className="columns">
-                                <img src="./images/megamenu-image1.png" className='hidden-groups__img' />
+                                <img src="../images/megamenu-image1.png" className='hidden-groups__img' />
                             </div>
                         </div>
                     </li>

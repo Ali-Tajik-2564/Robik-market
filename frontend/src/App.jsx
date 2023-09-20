@@ -4,6 +4,7 @@ import './App.css'
 import TopBar from './component/TopBar/TopBar'
 import routes from './router'
 import MainHeaders from './component/mainHeader/MainHeaders'
+import Footer from './component/Footer/Footer'
 
 function App() {
   const route = useRoutes(routes)
@@ -15,7 +16,7 @@ function App() {
       <MainHeaders />
       {route}
 
-
+      <Footer />
     </>
   )
 }
