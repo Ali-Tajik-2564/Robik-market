@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 
 
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import Comments from '../../Comments/Comments';
 
 export default function ProductPage() {
     return (
@@ -64,35 +65,49 @@ export default function ProductPage() {
 
                     <div className='flex flex-col items-end justify-start space-y-2 mx3 p-3 w-full '>
                         <h2 className='text-xl'>گزینه های موجود:</h2>
-                        <table className='block  ' >
-                            <thead className=''>
-                                <tr className='text-lg font-semibold space-x- space-y-3 w-2/3 text-center m-2'>
+                        <table className='w-[60%]' >
+                            <thead className='   '>
+                                <tr className='text-center'>
                                     <td>تعداد</td>
                                     <td>گارانتی</td>
                                     <td>رنگ</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className='text-lg font-medium'>
-                                    <td></td>
-                                    <td className='w-16 h12 bg-slate-100 border-none target:border-gray-100 ' >
-                                        <select name="garanty" id="">
+                                <tr className='text-center'>
+                                    <td>
+                                        <input type="number" className='w-10 h-10 border border-gray-300 text-center rounded-sm' />
+                                    </td>
+                                    <td  >
+                                        <select name="garanty" id="" className=' border border-gray-300 text-center rounded-sm w-18 h-8'>
                                             <option value="بدون گارانتی">بدون گارانتی</option>
                                             <option value="۶ماه">۶ماه</option>
                                             <option value="۱ سال">۱ سال</option>
                                             <option value="۲ سال">۲ سال</option>
                                         </select>
                                     </td>
-                                    <td className='space-x-2'>
-                                        <input type="text" className='w-6 h-6 bg-red-600 rounded-xl'  ></input>
-                                        <input type="text" className='w-6 h-6 bg-blue-600 rounded-xl'  ></input>
-                                        <input type="text" className='w-6 h-6 bg-black rounded-xl'  ></input>
-                                        <input type="text" className='w-6 h-6 bg-yellow-500 rounded-xl'  ></input>
+                                    <td className='space-x-1'>
+                                        <input type="text" className='w-6 h-6 bg-red-600 rounded-xl cursor-pointer focus:scale-110 focus:border-gray-200 focus:border-2'   ></input>
+                                        <input type="text" className='w-6 h-6 bg-blue-600 rounded-xl cursor-pointer focus:scale-110 focus:border-gray-200 focus:border-2'   ></input>
+                                        <input type="text" className='w-6 h-6 bg-black rounded-xl cursor-pointer focus:scale-110 focus:border-gray-200 focus:border-2'   ></input>
+                                        <input type="text" className='w-6 h-6 bg-yellow-500 rounded-xl cursor-pointer focus:scale-110 focus:border-gray-200 focus:border-2'   ></input>
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>   </div>
+                        </table>
+                        <button className=' flex flex-row-reverse  justify-center items-center text-lg font-semibold text-white rounded-lg w-52 h-12 bg-gray-600 mt-4 p-2 hover:bg-slate-500 transition-all duration-500 ease-in'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                            </svg>
+
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
                 </div>  </div>
+
+            <div className="w-[80%] text-right">
+                <Comments />
+            </div>
         </div >
     )
 }
