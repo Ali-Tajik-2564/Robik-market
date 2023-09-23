@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { BsStarFill } from "react-icons/bs"
-import { BsStarHalf } from "react-icons/bs"
+import { Navigation, Pagination, Mousewheel, Keyboard, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
+
+import { BsStarFill } from "react-icons/bs"
+import { BsStarHalf } from "react-icons/bs"
 import Title from '../../component/Title/Title';
 import ProductBox from '../../component/ProductBox/ProductBox';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import Comments from '../../Comments/Comments';
 
 export default function ProductPage() {
@@ -37,6 +39,7 @@ export default function ProductPage() {
                         keyboard={true}
                         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                         className="mySwiper"
+
                     >
                         <SwiperSlide><img src="../images/phone1.webp" alt="" /></SwiperSlide>
                         <SwiperSlide><img src="../images/phone2.webp" alt="" /></SwiperSlide>
@@ -105,91 +108,49 @@ export default function ProductPage() {
                     </div>
                 </div>  </div>
 
-            <div className="w-[80%] mx-auto mb-4 ">
+            <div className="w-[80%] mx-auto my-12 ">
                 <Comments />
             </div>
             <div className="w-full">
                 <Title title="محصولات مرتبط" subTitle="" />
-                <div className="m-auto">
-                    <Swiper spaceBetween={50}
-                        slidesPerView={3}>
-                        <SwiperSlide><Link to="/products/3" className='decoration-0 list-none'>
-                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+                <div className="" >
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        freeMode={true}
 
-                                <p className='product-info'>
-                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
-                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
+                        direction='horizontal'
+                        pagination={{
+                            clickable: true,
+                            progressbarOpposite: "true"
+                        }}
 
-                                        <BsStarHalf className="text-yellow-400" />
+                        rev='true'
+                        modules={[FreeMode, Pagination,]}
+                        className="mySwiper">
+                        <SwiperSlide >
 
-                                    </span >
+                            <Link to="/products/3" className='decoration-0 list-none'>
+                                <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
 
+                                    <p className='product-info'>
+                                        <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
+                                        <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
+                                            <BsStarFill className="text-yellow-400" />
+                                            <BsStarFill className="text-yellow-400" />
+                                            <BsStarFill className="text-yellow-400" />
+                                            <BsStarFill className="text-yellow-400" />
 
-                                </p>
-                            </ProductBox>
-                        </Link></SwiperSlide>
-                        <SwiperSlide><Link to="/products/3" className='decoration-0 list-none'>
-                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+                                            <BsStarHalf className="text-yellow-400" />
 
-                                <p className='product-info'>
-                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
-                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-
-                                        <BsStarHalf className="text-yellow-400" />
-
-                                    </span >
+                                        </span >
 
 
-                                </p>
-                            </ProductBox>
-                        </Link></SwiperSlide>
-                        <SwiperSlide><Link to="/products/3" className='decoration-0 list-none'>
-                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+                                    </p>
+                                </ProductBox>
+                            </Link></SwiperSlide>
 
-                                <p className='product-info'>
-                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
-                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-
-                                        <BsStarHalf className="text-yellow-400" />
-
-                                    </span >
-
-
-                                </p>
-                            </ProductBox>
-                        </Link></SwiperSlide>
-                        <SwiperSlide><Link to="/products/3" className='decoration-0 list-none'>
-                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
-
-                                <p className='product-info'>
-                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
-                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-                                        <BsStarFill className="text-yellow-400" />
-
-                                        <BsStarHalf className="text-yellow-400" />
-
-                                    </span >
-
-
-                                </p>
-                            </ProductBox>
-                        </Link></SwiperSlide>
-                        <SwiperSlide><Link to="/products/3" className='decoration-0 list-none'>
+                        <SwiperSlide ><Link to="/products/3" className='decoration-0 list-none'>
                             <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
 
                                 <p className='product-info'>
@@ -209,6 +170,67 @@ export default function ProductPage() {
                             </ProductBox>
                         </Link></SwiperSlide>
 
+                        <SwiperSlide ><Link to="/products/3" className='decoration-0 list-none'>
+                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                <p className='product-info'>
+                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
+                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+
+                                        <BsStarHalf className="text-yellow-400" />
+
+                                    </span >
+
+
+                                </p>
+                            </ProductBox>
+                        </Link></SwiperSlide>
+
+                        <SwiperSlide ><Link to="/products/3" className='decoration-0 list-none'>
+                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                <p className='product-info'>
+                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
+                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+
+                                        <BsStarHalf className="text-yellow-400" />
+
+                                    </span >
+
+
+                                </p>
+                            </ProductBox>
+                        </Link></SwiperSlide>
+
+                        <SwiperSlide ><Link to="/products/3" className='decoration-0 list-none'>
+                            <ProductBox img={"slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                <p className='product-info'>
+                                    <span className='product-info-item text-yellow-400'>6.000.000 تومان</span>
+                                    <span className='product-info-item flex justify-end'> (۱۲ رای دهنده)
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+                                        <BsStarFill className="text-yellow-400" />
+
+                                        <BsStarHalf className="text-yellow-400" />
+
+                                    </span >
+
+
+                                </p>
+                            </ProductBox>
+                        </Link></SwiperSlide>
+
+                        ...
                     </Swiper>
                 </div>
             </div>

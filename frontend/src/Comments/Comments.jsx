@@ -4,11 +4,11 @@ import Table from 'react-bootstrap/Table';
 function Comments() {
     return (
         <Tabs
-            defaultActiveKey="profile"
             id="uncontrolled-tab-example"
             className="mb-4  "
             dir='rtl'
             bordered="true"
+            defaultActiveKey="نقد و بررسی"
         >
             <Tab eventKey="نقد و بررسی" title="نقد و بررسی" tabClassName='text-gray-400 text-lg font-semibold ' >
                 <p className=' w-full text-lg p-2 text-right font-medium space-x-2 '>
