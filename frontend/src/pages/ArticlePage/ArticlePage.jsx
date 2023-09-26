@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SideProductBox from '../../component/ProductBox/SideProductBox'
+import SideArticelBox from '../../component/ArticleBox/SideArticelBox'
 export default function ArticlePage() {
     return (
         <div>
@@ -16,11 +18,23 @@ export default function ArticlePage() {
                 </div>
 
             </div>
-            <div className="w-full flex px-4 py-2">
+            <div className="w-full flex  flex-row-reverse p-6 mx-4">
                 <div className="w-3/4">
 
                 </div>
-                <div className="w-1/4"></div>
+                <div className="w-1/4 px-2">
+                    <div className=' space-y-2 p-2 '>
+                        <SideProductBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" price="۶.۵۰۰.۰۰۰" />
+                        <SideProductBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" price="۶.۵۰۰.۰۰۰" />
+                        <SideProductBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" price="۶.۵۰۰.۰۰۰" />
+                    </div>
+                    <div>
+                        <SideArticelBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" subtitle="گوشی جدید سامسونگ رونمایی شد s22" />
+                        <SideArticelBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" subtitle="گوشی جدید سامسونگ رونمایی شد s22" />
+                        <SideArticelBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" subtitle="گوشی جدید سامسونگ رونمایی شد s22" />
+
+                    </div>
+                </div>
             </div>
         </div >
     )

@@ -11,7 +11,7 @@ import { BsStarFill } from "react-icons/bs"
 import { BsStarHalf } from "react-icons/bs"
 import Title from '../../component/Title/Title';
 import ProductBox from '../../component/ProductBox/ProductBox';
-import Comments from '../../Comments/Comments';
+import Comments from '../../component/Comments/Comments';
 
 export default function ProductPage() {
     return (
