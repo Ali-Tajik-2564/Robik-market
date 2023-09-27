@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --main-color: #38465c;
+  --main-color: #27374d;
   --main-color-light: #526d82;
   --shadow-color: #9db2bf;
-  --text-color: #a0bace;
+  --text-color: #dde6ed;
 }
-/* @font-face {
-  font-family: IranSans;
-  src: url("./fonts//IRANSans/IRANSans_Black.ttf");
-} */
+@font-face {
+  font-family: NoteSans;
+  src: url("./fonts/NotoSansArabic_Condensed-Medium.ttf");
+}
 * {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif sans-serif;
+  font-family: NoteSans;
 }
