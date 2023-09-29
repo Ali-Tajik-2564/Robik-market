@@ -3,22 +3,11 @@ import { Link } from 'react-router-dom'
 import SideProductBox from '../../component/ProductBox/SideProductBox'
 import SideArticelBox from '../../component/ArticleBox/SideArticelBox'
 import Comments from "../../component/Comments/Comments"
+import HeaderPage from '../../component/HeaderPage/HeaderPage'
 export default function ArticlePage() {
     return (
         <div>
-            <div className=' w-full h-38 flex flex-col justify-start items-end p-10 pb-14 bg-stone-100 space-y-4'>
-                <h3 className="text-3xl font-bold">گلکسی S21 اولترا 5g</h3>
-                <p className='text-sm font-semibold'>سامسونگ برای گوشی پرچم‌دارش، یعنی گلکسی S21 اولترا 5G، علاوه‌بر رنگ‌های قبلی، رنگ جدید سرمه‌ای را معرفی کرد.</p>
-
-                <div className='flex flex-row-reverse gap-2 text-sm font-semibold '>
-                    <Link to="/" >خانه</Link>
-                    /
-                    <Link >بلاگ آموزشی</Link>
-                    /
-                    <Link >آموزش وردپرس</Link>
-                </div>
-
-            </div>
+            <HeaderPage title="گلکسی S21 اولترا 5g" subtitle="سامسونگ برای گوشی پرچم‌دارش، یعنی گلکسی S21 اولترا 5G، علاوه‌بر رنگ‌های قبلی، رنگ جدید سرمه‌ای را معرفی کرد." route="خانه" />
             <div className="w-[90%] flex  flex-row-reverse p-6 mx-auto ">
                 <div className="w-3/4 mx-2 p-2 border-b-2 border-gray-300">
                     <span className='w-full m-2 flex flex-row-reverse justify-between items-center border-b-2 border-black rounded-sm '>

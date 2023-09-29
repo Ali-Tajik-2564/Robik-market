@@ -14,22 +14,25 @@ import ProductBox from '../../component/ProductBox/ProductBox';
 import Comments from '../../component/Comments/Comments';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import HeaderPage from '../../component/HeaderPage/HeaderPage';
 import Table from 'react-bootstrap/Table';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 export default function ProductPage() {
+    const addingToBasket = () => {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'این محصول به سبد خرید اضافه شد',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
     return (
         <div>
-            <div className=' w-full h-38 flex flex-col justify-start items-end p-10  bg-stone-100 space-y-4'>
-                <h3 className="text-3xl font-bold">گوشی موبایل سامسونگ مدل Galaxy A21s</h3>
-                <p className='text-sm font-semibold'>دارای قابلیت دو سیم کارته و حافظه 128 گیگابایت</p>
-                <div className='flex flex-row-reverse gap-2 text-sm font-semibold '>
-                    <Link to="/" >خانه</Link>
-                    /
-                    <Link >فروشگاه</Link>
-                    /
-                    <Link >گوشی موبایل سامسونگ مدل Galaxy A21s</Link>
-                </div>
 
-            </div>
+            <HeaderPage title="گوشی موبایل سامسونگ مدل Galaxy A21s" subtitle="دارای قابلیت دو سیم کارته و حافظه 128 گیگابایت" route="خانه" />
+
             <div className='w-full h-70 p-8 my-5 flex flex-row-reverse'>
 
                 <div className="w-1/3 h-full" >
@@ -100,7 +103,7 @@ export default function ProductPage() {
                                 </tr>
                             </tbody>
                         </table>
-                        <button className=' flex flex-row-reverse  justify-center items-center text-lg font-semibold text-white rounded-lg w-52 h-12 bg-gray-600 mt-4 p-2 hover:bg-slate-500 transition-all duration-500 ease-in'>
+                        <button className=' flex flex-row-reverse  justify-center items-center text-lg font-semibold text-white rounded-lg w-52 h-12 bg-gray-600 mt-4 p-2 hover:bg-slate-500 transition-all duration-500 ease-in' onClick={addingToBasket}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                             </svg>
@@ -210,9 +213,9 @@ export default function ProductPage() {
                 <Title title="محصولات مرتبط" subTitle="" />
                 <div className="" >
                     <Swiper
-                        slidesPerView={3}
-                        spaceBetween={30}
-                        freeMode={true}
+                        slidesPerView={4}
+
+
 
                         direction='horizontal'
                         pagination={{
@@ -220,7 +223,7 @@ export default function ProductPage() {
                             progressbarOpposite: "true"
                         }}
 
-                        rev='true'
+
                         modules={[FreeMode, Pagination,]}
                         className="mySwiper">
                         <SwiperSlide >
@@ -325,7 +328,7 @@ export default function ProductPage() {
                             </ProductBox>
                         </Link></SwiperSlide>
 
-                        ...
+
                     </Swiper>
                 </div>
             </div>

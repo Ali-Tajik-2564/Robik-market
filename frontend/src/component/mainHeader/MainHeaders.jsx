@@ -21,13 +21,13 @@ export default function MainHeaders() {
                 </div>
 
                 <span className='register'>
-                    <Link >
+                    <Link to="/login" >
                         ورود/ثبت نام
                     </Link>
                 </span>
 
                 <button className='basket'>
-                    <span className='basket-text'>سبد خرید (۲)</span>
+                    <Link to="/user-basket" className='basket-text'>سبد خرید (۲)</Link>
                     <HiShoppingCart className='basket-icon' />
                 </button>
 
@@ -99,10 +99,7 @@ export default function MainHeaders() {
                             </div>
                         </div>
                     </li>
-                    <li className='main-menu '>
-                        درباره ما
 
-                    </li>
                     <li className='main-menu '>
 
                         <IoIosArrowDown className='down-icon' />
@@ -111,20 +108,20 @@ export default function MainHeaders() {
                         <div className='hidden-menu'>
                             <ul className="hidden-list">
                                 <li>
-                                    <Link >
-                                        محصولات (کاشی کاری)
+                                    <Link to="/">
+                                        صفحه اصلی
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link >
+                                    <Link to="/productList">
                                         محصولات (لیست)
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link >
-                                        جزيیات محصول
+                                    <Link to="/user-panel">
+                                        پنل کاربری
 
                                     </Link>
                                 </li>
@@ -133,47 +130,16 @@ export default function MainHeaders() {
 
                     </li>
                     <li className='main-menu '>
-                        <IoIosArrowDown className='down-icon' />
-
-                        تماس با فروشگاه
-                        <div className='hidden-menu'>
-                            <ul className="hidden-list">
-                                <li>
-                                    <Link >
-                                        سولات متداول
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link >
-                                        تماس با ما
-
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                        <Link to="/questions">
+                            سوالات متداول
+                        </Link>
 
                     </li>
                     <li className='main-menu '>
-                        <IoIosArrowDown className='down-icon' />
+                        <Link to="/articleList">
 
-                        بلاگ اموزشی
-                        <div className='hidden-menu'>
-                            <ul className="hidden-list">
-                                <li>
-                                    <Link >
-                                        ارشیو مطالب
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link >
-                                        داخلی بلاگ
-
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            بلاگ اموزشی
+                        </Link>
 
                     </li>
                     <li className='main-menu '>
@@ -182,48 +148,32 @@ export default function MainHeaders() {
                         سایر صفحات
                         <div className='hidden-menu'>
                             <ul className="hidden-list">
-                                <li>
-                                    <Link >
-                                        مقایسه محصول
 
-                                    </Link>
-                                </li>
                                 <li>
-                                    <Link >
+                                    <Link to="/user-basket" >
                                         سبد خرید
 
                                     </Link>
                                 </li>
                                 <li className='list-border__bottom'>
-                                    <Link >
+                                    <Link to="/factor" >
                                         پیش فاکتور
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link >
+                                    <Link to="/login" >
                                         ورود به سایت
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link >
+                                    <Link to="/register">
                                         ثبت نام در سایت
 
                                     </Link>
                                 </li>
-                                <li className='list-border__bottom'>
-                                    <Link >
-                                        بازیابی رمز عبور
 
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link >
-                                        صفحه ۴۰۴
-
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
 
@@ -235,29 +185,24 @@ export default function MainHeaders() {
                         <div className='hidden-menu'>
                             <ul className="hidden-list">
                                 <li>
-                                    <Link >
+                                    <Link to="/user-panel" >
                                         مشخصات کاربری
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link >
+                                    <Link to="/user-panel/orders">
                                         سفارشات
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link >
+                                    <Link to="/user-panel/address">
                                         ادرس ها
 
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link >
-                                        علاقه مندی ها
 
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
 

@@ -4,36 +4,33 @@ import { BiLogoFacebook } from "react-icons/bi"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineTwitter } from "react-icons/ai"
 import { AiFillYoutube } from "react-icons/ai"
+import { Link } from 'react-router-dom'
 export default function Footer() {
     return (
         <>
             <div className="flex items-center flex-row-reverse mt-0 w-full h-70 p-3 bg-slate-50 ">
-                <div className="flex flex-row-reverse p-2  items-center w-1/2 justify-evenly ">
+                <div className="flex flex-row-reverse p-2  items-start w-1/2 justify-evenly ">
                     <ul className='space-y-2 flex flex-col items-end justify-center'>
-                        <li className='text-xl font-bold list-none'>دسترسی سریع</li>
-                        <li className="list-none">بلاگ اموزشی</li>
-                        <li className="list-none">راهنمای خرید </li>
-                        <li className="list-none">شیوه پرداخت</li>
-                        <li className="list-none">سوالات متداول</li>
-                        <li className="list-none">درباره ما</li>
-                        <li className="list-none">تماس با ما</li>
+                        <li className='text-xl font-bold list-none '>دسترسی سریع</li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/articleList">  بلاگ اموزشی </Link> </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/questions"> سوالات متداول </Link> </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer" onClick={() => scroll(0, 0)}>تماس با ما</li>
                     </ul>
                     <ul className='space-y-2 flex flex-col items-end justify-center'>
                         <li className='text-xl font-bold list-none'>گروه های محصولات</li>
-                        <li className="list-none">گوشی موبایل</li>
-                        <li className="list-none">جانبی کامپیوتر</li>
-                        <li className="list-none">جانبی موبایل</li>
-                        <li className="list-none">ساعت هوشمند</li>
-                        <li className="list-none">دوربین</li>
-                        <li className="list-none">لپ تاپ</li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="">  گوشی موبایل </Link> </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> جانبی کامپیوتر </Link></li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> جانبی موبایل </Link> </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> ساعت هوشمند </Link> </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> دوربین </Link> </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> لپ تاپ </Link> </li>
                     </ul>
                     <ul className='space-y-2 flex flex-col items-end justify-center'>
                         <li className='text-xl font-bold list-none'>ناحیه کاربری</li>
-                        <li className="list-none">ورود به سایت</li>
-                        <li className="list-none">عضویت در سایت </li>
-                        <li className="list-none">بازیابی رمز عبور</li>
-                        <li className="list-none">سبد خرید</li>
-                        <li className="list-none">پیش فاکتور</li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/login">  ورود به سایت  </Link></li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="register"> عضویت در سایت </Link></li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/user-basket"> سبد خرید  </Link>  </li>
+                        <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/factor"> پیش فاکتور </Link>  </li>
                     </ul>
                 </div>
                 <div className="flex flex-col items-end justify-end w-1/2 h-full gap-3  ">
