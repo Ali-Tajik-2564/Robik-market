@@ -26,8 +26,8 @@ export default function MainHeaders() {
                     </Link>
                 </span>
 
-                <button className='basket'>
-                    <Link to="/user-basket" className='basket-text'>سبد خرید (۲)</Link>
+                <button className='basket '>
+                    <Link to="/user-basket" className='basket-text '>سبد خرید (۲)</Link>
                     <HiShoppingCart className='basket-icon' />
                 </button>
 

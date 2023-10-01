@@ -31,7 +31,7 @@ export default function Basket() {
                         <span> : مبلغ قابل پرداخت </span>
                         <span>3.000.000 تومان</span>
                     </div>
-                    <button className='w-[80%] p-2 mx-auto my-2 bg-green-700 text-white font-bold text-xl rounded-lg hover:bg-green-800 transition-colors duration-300' >ادامه ثبت سفارش</button>
+                    <button className='w-[80%] p-2 mx-auto my-2 bg-green-700 text-white font-bold text-xl rounded-lg hover:bg-green-800 transition-colors duration-300' > <Link to="/factor" >  ادامه ثبت سفارش </Link></button>
                 </div>
                 <div className="w-3/4 border border-gray-50 rounded-sm p-3 space-y-4">
                     <p className='w-full text-right p2 text-lg font-semibold '>
@@ -52,7 +52,7 @@ export default function Basket() {
                             <tr className='flex flex-row-reverse w-full h-auto items-center justify-between p-2 border-b border-b-gray-300 m-1'>
                                 <td className='w-[30%]'>
                                     <SideProductBox title="گوشی موبایل سامسونگ مدل Galaxy A21s
-                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
+                                            دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
                                 </td>
                                 <td>
                                     3.200.000 تومان
@@ -74,7 +74,7 @@ export default function Basket() {
                             <tr className='flex flex-row-reverse w-full h-auto items-center justify-between p-2 border-b border-b-gray-300 m-1'>
                                 <td className='w-[30%]'>
                                     <SideProductBox title="گوشی موبایل سامسونگ مدل Galaxy A21s
-                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
+                                          دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
                                 </td>
                                 <td>
                                     3.200.000 تومان
@@ -96,7 +96,7 @@ export default function Basket() {
                             <tr className='flex flex-row-reverse w-full h-auto items-center justify-between p-2 border-b border-b-gray-300 m-1'>
                                 <td className='w-[30%]'>
                                     <SideProductBox title="گوشی موبایل سامسونگ مدل Galaxy A21s
-                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
+                                دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
                                 </td>
                                 <td>
                                     3.200.000 تومان
