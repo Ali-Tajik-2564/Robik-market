@@ -48,7 +48,29 @@ export default function Basket() {
                                 <td>قیمت نهایی</td>
                             </th>
                         </thead>
-                        <tbody>
+                        <tbody className='max-h-[30rem] overflow-y-auto overflow-x-hidden scroll-m-2 '>
+                            <tr className='flex flex-row-reverse w-full h-auto items-center justify-between p-2 border-b border-b-gray-300 m-1'>
+                                <td className='w-[30%]'>
+                                    <SideProductBox title="گوشی موبایل سامسونگ مدل Galaxy A21s
+                                            دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت" img="phone1.webp" price="" />
+                                </td>
+                                <td>
+                                    3.200.000 تومان
+                                </td>
+                                <td className='flex justify-center items-center space-x-2'>
+                                    <span onClick={PlusCount} className='text-xl flex items-center justify-center font-bold  w-10 h-12  bg-slate-100 rounded-sm cursor-pointer border border-slate-50'>+</span>
+                                    <input type="text" value={count} disabled className='w-12 h-12 bg-slate-100 rounded-sm  text-center' />
+                                    <span onClick={MinusCount} className='text-xl flex items-center justify-center font-bold  w-10 h-12  bg-slate-100 rounded-sm  cursor-pointer border border-slate-50'>-</span>
+                                </td>
+                                <td>
+                                    3.200.000 تومان
+
+                                </td>
+                                <td className='flex flex-col-reverse items-center justify-center'>
+                                    <button className='m-2 text-white bg-red-500 px-3 py-2 hover:bg-red-600  rounded-lg text-sm'>حذف </button>       3.000.000 تومان
+                                </td>
+
+                            </tr>
                             <tr className='flex flex-row-reverse w-full h-auto items-center justify-between p-2 border-b border-b-gray-300 m-1'>
                                 <td className='w-[30%]'>
                                     <SideProductBox title="گوشی موبایل سامسونگ مدل Galaxy A21s
@@ -118,7 +140,7 @@ export default function Basket() {
                         </tbody>
                     </table>
 
-                    <button className='w-full text-left text-lg font-bold tracking-tighter text-red-600 hover:text-red-500 p-2 '>حذف کل سبد خرید</button>
+                    <button className='block text-left text-lg font-bold tracking-tighter text-red-600 hover:text-red-500 p-2 hover:shadow-sm '>حذف کل سبد خرید</button>
                 </div>
             </div>
         </div>

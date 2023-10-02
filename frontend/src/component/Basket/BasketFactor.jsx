@@ -1,6 +1,7 @@
 import React from 'react'
-import HeaderPage from '../HeaderPage/HeaderPage'
 import { Link } from 'react-router-dom'
+import HeaderPage from '../HeaderPage/HeaderPage'
+import Card from 'react-bootstrap/Card';
 export default function BasketFactor() {
     return (
         <div>
@@ -29,14 +30,14 @@ export default function BasketFactor() {
                         <h3 className='text-lg font-semibold text-right mb-1'>انتخاب نحوه پرداخت</h3>
                         <div className='w-full flex flex-row gap-x-3 justify-end items-center m-1 text-lg font-medium '>
                             پرداخت انلاین
-                            <input type="radio" name="2" className="w-4 h-4 checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
+                            <input type="radio" name="2" className="w-4 h-4 bg-slate-200 checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
                         </div>
                         <div className='w-full flex flex-row gap-x-3 justify-end items-center m-1 text-lg font-medium '>
                             ثبت فیش پرداخت/کارت به کارت
-                            <input type="radio" name="2" className="w-4 h-4 checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
+                            <input type="radio" name="2" className="w-4 h-4 bg-slate-200 checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
 
                         </div>
-                        <div className='text-lg font-semibold flex justify-end items-center gap-x-2'>
+                        <div className='text-lg font-semibold flex justify-end items-center gap-x-1'>
                             <p>
                                 <span className='text-yellow-600'>        قوانین و مقررات  </span> را خواندم و قبول دارم</p>
                             <input type="checkbox" name="" id="1" className='w-4 h-4 ' />
@@ -66,9 +67,13 @@ export default function BasketFactor() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full border rounded-sm p-3 space-y-3'>
+                    <div className='max-w-full border rounded-sm p-3 space-y-3'>
                         <h2 className='text-xl font-bold text-mainPrimary text-right '>سفارشات شما</h2>
-                        <div className="w-full space-x-4 p-1">
+                        <div className="max-w-[60rem] h-full flex flex-row-reverse  space-x-4 p-1 overflow-x-scroll overflow-y-hidden">
+
+
+
+
 
                         </div>
 
