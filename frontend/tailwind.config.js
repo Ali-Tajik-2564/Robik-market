@@ -4,12 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        mainPrimary: "#99a98f",
-        mainPrimaryLight: "#c1d0b5",
-        shadowPrimary: "#d6e8db",
-        primaryText: "#fff8de",
+        mainPrimary: "#276678",
+        mainPrimaryLight: "#1687a7",
+        shadowPrimary: "#d3e0ea",
+        primaryText: "#f6f5f5",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };

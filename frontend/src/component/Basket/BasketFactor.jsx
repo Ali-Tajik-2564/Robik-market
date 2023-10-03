@@ -4,10 +4,10 @@ import HeaderPage from '../HeaderPage/HeaderPage'
 import Card from 'react-bootstrap/Card';
 export default function BasketFactor() {
     return (
-        <div>
+        <div className="bg-shadowPrimary">
             <HeaderPage title="پیش فاکتور" subtitle="با تکیمل پرداخت فاکتور، خرید خود را تکمیل کنید." route="خانه" />
-            <div className=" flex w-[90%] mt-4 mx-auto p-3 items-start   gap-x-3">
-                <div className="w-1/4 flex flex-col items-center  border border-gray-50 rounded-sm p-2 space-y-4 ">
+            <div className=" flex w-[90%] mt-4 mx-auto p-3 items-start     gap-x-3">
+                <div className="w-1/4 flex flex-col items-center bg-primaryText  shadow-sm   border border-gray-50 rounded-sm p-2 space-y-4 ">
                     <div className="w-full border-b border-b-gray-300 p-2">
                         <div className='flex w-full m-2 flex-row-reverse justify-between text-lg rounded-sm font-bold p-3'>
                             <span> : جمع کل فاکتور</span>
@@ -47,8 +47,8 @@ export default function BasketFactor() {
                         </div>
                     </div>
                 </div>
-                <div className="w-3/4 space-y-4">
-                    <div className="w-full border rounded-sm p-4 space-y-3">
+                <div className="w-3/4    space-y-4 ">
+                    <div className="w-full border rounded-sm p-4 space-y-3 bg-primaryText  shadow-sm">
                         <h2 className='text-xl font-bold text-mainPrimary text-right '>آدرس تحویل سفارش</h2>
                         <div className='flex justify-evenly flex-row-reverse items-center'>
                             <div className="w-3/4 p-3 border border-slate-100 rounded-lg space-y-2 " >
@@ -67,9 +67,160 @@ export default function BasketFactor() {
                             </div>
                         </div>
                     </div>
-                    <div className='max-w-full border rounded-sm p-3 space-y-3'>
+                    <div className='max-w-full border rounded-sm p-3 space-y-3 bg-primaryText  shadow-sm'>
                         <h2 className='text-xl font-bold text-mainPrimary text-right '>سفارشات شما</h2>
-                        <div className="max-w-[60rem] h-full flex flex-row-reverse  space-x-4 p-1 overflow-x-scroll overflow-y-hidden">
+                        <div className="w-full max-h-[50rem] flex flex-row-reverse flex-wrap    p-1  overflow-y-auto">
+
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
+                            <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                                <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                                <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                                    گوشی موبایل سامسونگ مدل Galaxy A21s
+                                    دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                                </h2>
+                                <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                                    <span className='flex gap-x-1 text-base items-center'>
+                                        <p className='text-mainPrimaryLight'>تعداد</p>
+                                        <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                                    </span>
+                                    <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                        <p>تومان</p>
+                                        <p>6.000.000</p>
+                                    </span>
+
+                                </div>
+
+                            </div>
 
 
 

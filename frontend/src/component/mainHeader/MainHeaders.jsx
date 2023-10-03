@@ -34,8 +34,8 @@ export default function MainHeaders() {
 
             </div>
             <div className="bottom">
-                <ul className="access-bar space-x-2">
-                    <li className='main-menu menu-title' >
+                <ul className="access-bar space-x-3 child:transition-transform ">
+                    <li className='main-menu menu-title child-hover:transition-all child:delay-150' >
                         <IoIosArrowDown className='down-icon' />
                         گروه های محصولات
                         <AiOutlineMenu className='menu-icon' />
@@ -100,7 +100,7 @@ export default function MainHeaders() {
                         </div>
                     </li>
 
-                    <li className='main-menu '>
+                    <li className='main-menu child-hover:transition-all child:delay-150 '>
 
                         <IoIosArrowDown className='down-icon' />
 
@@ -142,7 +142,7 @@ export default function MainHeaders() {
                         </Link>
 
                     </li>
-                    <li className='main-menu '>
+                    <li className='main-menu child-hover:transition-all child:delay-150 '>
                         <IoIosArrowDown className='down-icon' />
 
                         سایر صفحات
@@ -155,7 +155,7 @@ export default function MainHeaders() {
 
                                     </Link>
                                 </li>
-                                <li className='list-border__bottom'>
+                                <li className=''>
                                     <Link to="/factor" >
                                         پیش فاکتور
 
@@ -178,7 +178,7 @@ export default function MainHeaders() {
                         </div>
 
                     </li>
-                    <li className='main-menu '>
+                    <li className='main-menu child-hover:transition-all child:delay-150 '>
                         <IoIosArrowDown className='down-icon' />
 
                         پروفایل کاربری

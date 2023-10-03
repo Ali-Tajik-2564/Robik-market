@@ -61,20 +61,20 @@ export default function Timer({ date }) {
     return (
         <div className="w-4/5 h-20 flex flex-row flex-nowrap justify-start items-center mr-3 space-x-2 text-lg  mt-1 xl:mt-2 lg:text-[sm]  md:mt-2">
             <div className=" flex flex-col justify-evenly items-center">
-                <span className='text-white text-xl font-bold  bg-yellow-400 rounded-1 w-14 h-11  flex items-center justify-center'>{leftDays}</span>
+                <span className='text-primaryText text-xl font-medium  bg-mainPrimary rounded-1 w-14 h-11  flex items-center justify-center'>{leftDays}</span>
                 <span className='block text-sm  '>روز</span>
             </div>
             <div className=" flex flex-col justify-evenly items-center">
-                <span className='text-white text-xl font-bold  bg-yellow-400 rounded-1 w-14 h-11  flex items-center justify-center'>  {leftHours}</span>
+                <span className='text-primaryText text-xl font-medium  bg-mainPrimary rounded-1 w-14 h-11  flex items-center justify-center'>  {leftHours}</span>
                 <span className='block text-sm  '>ساعت</span>
             </div>
             <div className=" flex flex-col justify-evenly items-center">
-                <span className='text-white text-xl font-bold  bg-yellow-400 rounded-1  w-14 h-11 flex items-center justify-center'> {leftMinutes}</span>
+                <span className='text-primaryText text-xl font-medium  bg-mainPrimary rounded-1  w-14 h-11 flex items-center justify-center'> {leftMinutes}</span>
                 <span className='block text-sm  '>دقیقه</span>
             </div>
             <div className=" flex flex-col justify-evenly items-center">
 
-                <span className='text-white text-xl font-bold  bg-yellow-400 rounded-1  w-14 h-11 flex items-center justify-center'>{leftSeconds} </span>
+                <span className='text-primaryText text-xl font-medium  bg-mainPrimary rounded-1  w-14 h-11 flex items-center justify-center'>{leftSeconds} </span>
                 <span className='block text-sm  '>ثانیه</span>
             </div>
         </div >

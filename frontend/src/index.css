@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --main-color: #99a98f;
-  --main-color-light: #c1d0b5;
-  --shadow-color: #d6e8db;
-  --text-color: #fff8de;
+  --main-color: #276678;
+  --main-color-light: #1687a7;
+  --shadow-color: #d3e0ea;
+  --text-color: #f6f5f5;
 }
 @font-face {
   font-family: NoteSans;
