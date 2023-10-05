@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "/index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -15,6 +20,7 @@ export default {
     function ({ addVariant }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
+      require("tw-elements/dist/plugin.cjs");
     },
   ],
 };
