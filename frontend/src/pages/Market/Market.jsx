@@ -1,33 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeaderPage from '../../component/HeaderPage/HeaderPage'
-import { Datepicker, Input, initTE, Collapse, } from "tw-elements";
-import Accordion from 'react-bootstrap/Accordion';
-initTE({ Datepicker, Input, Collapse }, { allowReinits: true });
+import CategoryFilter from '../../component/CategoryFilter/CategoryFilter'
+import NewProductsAccording from '../../component/newProductsAccording/newProductsAccording'
 
 export default function Market() {
+    const [category, setCategory] = useState("")
+    console.log(category);
     return (
-        <div>
+        <div className='bg-primaryText '>
             <HeaderPage title="فروشگاه روبیک مارکت" subtitle="هر آنچه نیاز دارید در این فروشگاه موجود است" route="خانه" />
-            <div className='container mx-auto flex flex-row-reverse justify-between items-center p-4 bg-slate-50 h-screen '>
-                <div className="w-1/4 h-full flex flex-col justify-start ">
+            <div className=' container mx-auto flex flex-row-reverse justify-between items-center p-4 bg-slate-50 h-screen '>
+                <div className="w-1/4 h-full flex flex-col justify-start gap-y-5 ">
+                    <CategoryFilter title="گروه های محصولات" categories={["گوشی موبایل", "جانبی موبایل", "دوربین دیجیتال", "ساعت هوشمند", "لپ تاپ"]} setCategoryValue={setCategory} />
+                    <div className="w-full flex gap-x-5 items-center justify-end p-2 rounded-sm text-mainPrimaryLight bg-primaryText">
+                        <span>فقط کالا های موجود</span>
+                        <input type="checkbox" name="inbox" className="w-4 h-4 bg-shadowPrimary checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
 
-                    <Accordion defaultActiveKey={['0']} alwaysOpen className='open:bg-none overflow-hidden'  >
-                        <Accordion.Item eventKey="0" className='bg-primaryText   overflow-hidden'  >
-                            <Accordion.Header >  <span className='text-mainPrimaryLight bg-none selection:backdrop-blur-none  text-lg font-md '>  گروه های محصولات </span> </Accordion.Header>
-                            <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum.
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
+                    </div>
+                    <div className="w-full flex gap-x-5 items-center justify-end p-2 rounded-sm text-mainPrimaryLight bg-primaryText">
+                        <span>فقط کالاهای دارای گارانتی</span>
+                        <input type="checkbox" name="garenty" className="w-4 h-4 bg-shadowPrimary checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
 
+                    </div>
+                    <NewProductsAccording title="جدید ترین محصولات" />
                 </div>
-                <div className="w-3/4"></div>
+                <div className="w-3 /4"></div>
             </div>
         </div>
     )

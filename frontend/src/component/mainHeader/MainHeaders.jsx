@@ -39,7 +39,7 @@ export default function MainHeaders() {
                         <IoIosArrowDown className='down-icon' />
                         گروه های محصولات
                         <AiOutlineMenu className='menu-icon' />
-                        <div className='hidden-menu hidden-groups'>
+                        <div className='hidden-menu rounded-t-md hidden-groups'>
                             <div className="columns first-column">
                                 <ul className="columns-list column-one-list" >
                                     <li className='columns-lins__item head-list '>کالای دیجیتال</li>
@@ -105,7 +105,7 @@ export default function MainHeaders() {
                         <IoIosArrowDown className='down-icon' />
 
                         صفحات فروشگاه
-                        <div className='hidden-menu'>
+                        <div className='hidden-menu rounded-t-md'>
                             <ul className="hidden-list">
                                 <li>
                                     <Link to="/">
@@ -114,7 +114,7 @@ export default function MainHeaders() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/productList">
+                                    <Link to="/market">
                                         محصولات (لیست)
 
                                     </Link>
@@ -129,7 +129,7 @@ export default function MainHeaders() {
                         </div>
 
                     </li>
-                    <li className='main-menu '>
+                    <li className='main-menu  '>
                         <Link to="/questions">
                             سوالات متداول
                         </Link>
@@ -146,7 +146,7 @@ export default function MainHeaders() {
                         <IoIosArrowDown className='down-icon' />
 
                         سایر صفحات
-                        <div className='hidden-menu'>
+                        <div className='hidden-menu rounded-t-md'>
                             <ul className="hidden-list">
 
                                 <li>
@@ -182,7 +182,7 @@ export default function MainHeaders() {
                         <IoIosArrowDown className='down-icon' />
 
                         پروفایل کاربری
-                        <div className='hidden-menu'>
+                        <div className='hidden-menu rounded-t-md'>
                             <ul className="hidden-list">
                                 <li>
                                     <Link to="/user-panel" >
