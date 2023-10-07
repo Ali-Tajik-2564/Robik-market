@@ -13,6 +13,7 @@ export default function NewProductsAccording({ title }) {
                         class="group relative flex justify-between flex-row-reverse   w-full items-center rounded-t-[15px] text-mainPrimaryLight border-0 bg-white px-4 py-3 text-left text-base  transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
                         type="button"
                         data-te-collapse-init
+                        data-te-collapse-collapsed
                         data-te-target="#collapseTwo"
                         aria-expanded="false"
                         aria-controls="collapseTwo">
@@ -39,7 +40,7 @@ export default function NewProductsAccording({ title }) {
                 </h2>
                 <div
                     id="collapseTwo"
-                    class="!visible"
+                    class="!visible hidden"
                     data-te-collapse-item
                     data-te-collapse-show
                     aria-labelledby="headingTwo"
