@@ -4,6 +4,7 @@ import CategoryFilter from '../../component/CategoryFilter/CategoryFilter'
 import NewProductsAccording from '../../component/newProductsAccording/newProductsAccording'
 import { Link } from 'react-router-dom'
 import ProductBox from "./../../component/ProductBox/ProductBox"
+import GridProductBox from '../../component/ProductBox/gridProductBox'
 import { BsStarFill } from "react-icons/bs"
 import { BsStarHalf } from "react-icons/bs"
 
@@ -33,7 +34,7 @@ export default function Market() {
                         <span className='text-lg font-medium text-mainPrimaryLight'>
                             تعداد کالای موجود : 200
                         </span>
-                        <div className='flex items-center justify-center gap-x-2'>
+                        <div className=' flex items-center justify-center gap-x-2'>
 
                             <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setGridItem("grid")} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 p-1 rounded-lg transition-all text-mainPrimaryLight  ${gridItem === "grid" ? "bg-mainPrimaryLight text-primaryText" : "hover:text-mainPrimary"} cursor-pointer`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
@@ -238,7 +239,12 @@ export default function Market() {
                     )}
                     {
                         gridItem === "grid" && (
-                            <div className="w-full mx-2 flex flex-col items-center justify-start gap-y-4"></div>
+                            <div className="w-full h-full mx-2 flex flex-col items-center justify-start gap-y-4">
+                                <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />
+                                <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />
+                                <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />
+                                <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />
+                            </div>
                         )
                     }
                 </div>
