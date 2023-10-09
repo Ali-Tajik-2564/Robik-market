@@ -20,10 +20,14 @@ export default function MainHeaders() {
                     <BiSearch className='search-box__icon' />
                 </div>
 
-                <span className='register'>
+                <span className='register flex gap-x-2 items-center justify-center'>
                     <Link to="/login" >
-                        ورود/ثبت نام
+                        ورود
                     </Link>
+                    <span className='text-2xl pt-2 font-bold'>
+                        /
+                    </span>
+                    <Link to="/register">ثبت نام</Link>
                 </span>
 
                 <button className='basket '>
@@ -129,12 +133,7 @@ export default function MainHeaders() {
                         </div>
 
                     </li>
-                    <li className='main-menu  '>
-                        <Link to="/questions">
-                            سوالات متداول
-                        </Link>
 
-                    </li>
                     <li className='main-menu '>
                         <Link to="/articleList">
 
