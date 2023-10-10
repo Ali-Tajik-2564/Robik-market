@@ -9,9 +9,9 @@ export default function MainHeaders() {
 
     return (
         <>
-            <div className="top">
+            <div className="top w-full inset-0 flex-grow">
                 <div className="logo">
-                    <span className='logo-title'>روبیک مارکت</span>
+                    <span className='logo-title hidden  lg:block'>روبیک مارکت</span>
                     <img src="../images/logo.png" alt="logo" className='logo-img' />
                 </div>
 
@@ -30,9 +30,12 @@ export default function MainHeaders() {
                     <Link to="/register">ثبت نام</Link>
                 </span>
 
-                <button className='basket '>
-                    <Link to="/user-basket" className='basket-text '>سبد خرید (۲)</Link>
-                    <HiShoppingCart className='basket-icon' />
+                <button className='basket  '>
+                    <Link to="/user-basket" className='w-full flex items-center justify-center gap-x-2'>
+                        <span>(۲)</span>
+                        <span className='  hidden  lg:block '>سبد خرید </span>
+                        <HiShoppingCart className='basket-icon' />
+                    </Link>
                 </button>
 
 
@@ -43,7 +46,7 @@ export default function MainHeaders() {
                         <IoIosArrowDown className='down-icon' />
                         گروه های محصولات
                         <AiOutlineMenu className='menu-icon' />
-                        <div className='hidden-menu rounded-t-md hidden-groups'>
+                        <div className='hidden-menu rounded-t-md hidden-groups  '>
                             <div className="columns first-column">
                                 <ul className="columns-list column-one-list" >
                                     <li className='columns-lins__item head-list '>کالای دیجیتال</li>

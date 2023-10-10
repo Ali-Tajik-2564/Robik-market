@@ -215,16 +215,12 @@ export default function ProductPage() {
                     <Swiper
                         slidesPerView={4}
 
-
-
-                        direction='horizontal'
+                        dir="rtl"
+                        navigation={true}
                         pagination={{
                             clickable: true,
-                            progressbarOpposite: "true"
                         }}
-
-
-                        modules={[FreeMode, Pagination,]}
+                        modules={[Navigation, Pagination]}
                         className="mySwiper">
                         <SwiperSlide >
 

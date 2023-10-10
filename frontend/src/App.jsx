@@ -10,14 +10,15 @@ function App() {
   const route = useRoutes(routes)
 
   return (
-    <>
+    <div className='mx-auto'>
 
       <TopBar />
+
       <MainHeaders />
       {route}
 
       <Footer />
-    </>
+    </div>
   )
 }
 
