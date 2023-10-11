@@ -202,7 +202,7 @@
   margin: 0.6rem;
 }
 .first-column {
-  border-left: 2px solid var(--text-color) !important;
+  border-left: 2px solid var(--text-color);
 }
 .column-one-list__items {
   margin: 0.8rem 0;
