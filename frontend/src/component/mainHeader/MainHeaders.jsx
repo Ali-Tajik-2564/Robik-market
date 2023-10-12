@@ -17,15 +17,15 @@ export default function MainHeaders() {
 
     return (
         <>
-            <div className="top w-full inset-0 flex-grow">
+            <div className="top px-2 md:px-10 m-0 gap-x-2 md:gap-x-4 py-3 text-xs md:text-base font-thin md:font-normal w-full inset-0  child:h-8 child:md:h-12">
                 <div className="logo">
                     <span className='logo-title hidden  lg:block'>روبیک مارکت</span>
-                    <img src="../images/logo.png" alt="logo" className='logo-img' />
+                    <img src="../images/logo.png" alt="logo" className='logo-img child:h-8 child:md:h-12' />
                 </div>
 
-                <div className="search-box">
-                    <input type="text" className="search-box__input" placeholder='جستجو کنید ...' dir='rtl' />
-                    <BiSearch className='search-box__icon' />
+                <div className="search-box px-1">
+                    <input type="text" className="search-box__input flex items-center " placeholder='جستجو کنید ...' dir='rtl' />
+                    <BiSearch className=' w-4 h-4 search-box__icon text-gray-400 rotate-90 text-xl  ' />
                 </div>
 
                 <span className='register flex gap-x-2 items-center justify-center'>
@@ -39,7 +39,7 @@ export default function MainHeaders() {
                 </span>
 
                 <button className='basket  '>
-                    <Link to="/user-basket" className='w-full flex items-center justify-center gap-x-2'>
+                    <Link to="/user-basket" className='w-full  text-base md:text-lg marker: flex items-center justify-center gap-x-2'>
                         <span>(۲)</span>
                         <span className='  hidden  lg:block '>سبد خرید </span>
                         <HiShoppingCart className='basket-icon' />

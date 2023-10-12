@@ -5,26 +5,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 0% !important;
   border-radius: 2px solid var(--main-color);
   padding: 10px;
 }
 .phone-number {
-  font-size: 1rem;
-  margin-left: 60px;
 }
 .access-container {
   display: flex;
   flex-direction: row;
   align-items: center !important;
   justify-content: space-between;
-  margin-right: 60px;
+
   margin-top: 0.5rem;
 }
 .access-container li {
   list-style: none;
-  font-size: 1rem;
-
-  padding: 0 15px;
 }
 .access-container li a {
   text-decoration: none;

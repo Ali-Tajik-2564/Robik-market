@@ -6,7 +6,7 @@
   align-items: center;
   background-color: var(--shadow-color);
   color: var(--text-color);
-  padding: 20px 50px;
+  margin: 0px !important;
   border-top: 2px solid var(--main-color);
   border-bottom: 2px solid var(--main-color);
 }
@@ -14,12 +14,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+
   width: 15%;
 }
 .logo-title {
   color: var(--main-color);
-  font-size: 1.2rem;
+
   font-weight: 500;
 }
 .search-box {
@@ -44,12 +44,10 @@
 .search-box__input:focus {
   outline: none;
 }
-.search-box__icon {
-  font-size: 1.5rem;
-}
+
 .register {
   color: var(--main-color);
-  font-size: 1.2rem;
+
   font-weight: 500;
 }
 .register a {
@@ -75,9 +73,7 @@
   font-size: 1rem;
   margin-right: 0.2rem;
 }
-.basket-icon {
-  font-size: 1.2rem;
-}
+
 .bottom {
   height: 3.5rem;
 }

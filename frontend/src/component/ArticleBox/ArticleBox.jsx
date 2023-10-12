@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 export default function ArticleBox({ img, title, date, children }) {
     return (
         <div className='box-container   '>
-            <Card className='w-[26rem] h-[33rem] bg-primaryText border-0 relative hover:opacity-75 ease-in transition-all duration-700' >
+            <Card className='w-[24rem] h-[33rem] bg-primaryText border-0 relative hover:opacity-75 ease-in transition-all duration-700' >
                 <Card.Img variant="top" src={`images/${img}`} className='h-[45%] rounded-2 hover:opacity-75 transition-all ease-in duration-700' />
                 <Card.Body>
                     <Card.Text>
