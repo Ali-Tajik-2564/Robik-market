@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./MainHeaders.css"
 import { HiShoppingCart } from "react-icons/hi"
-import { BiSearch } from "react-icons/bi"
+import { BiSearch, BiShoppingBag, BiUserCircle } from "react-icons/bi"
 import { Link } from "react-router-dom"
 import { AiOutlineMenu } from "react-icons/ai"
 import { IoIosArrowDown } from "react-icons/io"
@@ -9,6 +9,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md"
 import { RxCross2 } from "react-icons/Rx"
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { FaRegAddressCard } from "react-icons/fa"
 export default function MainHeaders() {
     const [show, setShow] = useState(false);
 
@@ -23,8 +24,8 @@ export default function MainHeaders() {
                     <img src="../images/logo.png" alt="logo" className='logo-img child:h-8 child:md:h-12' />
                 </div>
 
-                <div className="search-box px-1">
-                    <input type="text" className="search-box__input flex items-center " placeholder='جستجو کنید ...' dir='rtl' />
+                <div className="search-box px-1 ml-2 md:ml-12">
+                    <input type="text" className="search-box__input  text-mainPrimary " placeholder='جستجو کنید ...' dir='rtl' />
                     <BiSearch className=' w-4 h-4 search-box__icon text-gray-400 rotate-90 text-xl  ' />
                 </div>
 
@@ -49,8 +50,8 @@ export default function MainHeaders() {
 
             </div>
             <div className="bottom">
-                <ul className="access-bar space-x-3 child:transition-transform  child:p-2">
-                    <li className='main-menu menu-title child-hover:transition-all child:delay-150 lg:flex hidden'
+                <ul className="access-bar flex flex-row-reverse lg:justify-start justify-between items-center space-x-3 child:transition-transform  child:p-2 px-2 lg:px-12 child:text-sm child:lg:text-base">
+                    <li className='main-menu menu-title items-center justify-center text-base lg:text-xl hover:bg-primaryText hover:text-mainPrimary child-hover:transition-all child:delay-150 lg:flex hidden'
                     >
 
                         <IoIosArrowDown className='down-icon ' />
@@ -118,18 +119,22 @@ export default function MainHeaders() {
 
                         </div>
                     </li>
-                    <li className='main-menu menu-title  child-hover:transition-all child:delay-150 lg:hidden flex'>
-                        <Button variant="primary" className='border-none hover:bg-primaryText hover:text-mainPrimary flex p-2.5' onClick={handleShow}>
+                    <li className='main-menu menu-title flex  text-center justify-center bg-mainPrimaryLight hover:bg-none md:bg-mainPrimary hover:md:bg-primaryText hover:text-mainPrimary p-0  md:w-44 lg:w-60  child-hover:transition-all child:delay-150 lg:hidden  '>
+                        <Button variant="primary" className='border-none   hidden md:flex  hover:bg-primaryText hover:text-mainPrimary   p-1 lg:p-2.5' onClick={handleShow}>
                             <MdKeyboardArrowLeft className='down-icon block lg:hidden' />
+                            <span className=' md:text-sm lg:text-xl '>
+                                گروه های محصولات</span>
+                        </Button>
+                        <Button variant="primary" className='border-none justify-center items-center w-8 h-8 hover:bg-primaryText hover:text-mainPrimary  flex md:hidden p-0 ' onClick={handleShow}>
+                            <AiOutlineMenu className='menu-icon w-8 h-8  ' />
 
-                            گروه های محصولات
                         </Button>
 
                         <Offcanvas show={show} onHide={handleClose} placement='end' dir="rtl" >
                             <Offcanvas.Header closeButton className='bg-shadowPrimary'>
-                                <Offcanvas.Title className='  w-full flex flex-row-reverse justify-between ' >
+                                <Offcanvas.Title className='  w-full  flex flex-row-reverse justify-between ' >
                                     <RxCross2 onClick={() => handleClose()} className='hover:text-gray-700 text-mainPrimary p-1 cursor-pointer rounded-md border border-mainPrimaryLight shadow-sm w-8 h-8' />
-                                    <span className='text-mainPrimary text-2xl font-medium'>
+                                    <span className='text-mainPrimary text-xl  font-medium'>
                                         گروه های محصولات
                                     </span>
                                 </Offcanvas.Title>
@@ -201,12 +206,12 @@ export default function MainHeaders() {
                             </Offcanvas.Body>
                         </Offcanvas>
                     </li>
-                    <li className='main-menu child-hover:transition-all child:delay-150 '>
+                    <li className='main-menu child-hover:transition-all hidden lg:flex  child:delay-150 '>
 
                         <IoIosArrowDown className='down-icon' />
 
                         صفحات فروشگاه
-                        <div className='hidden-menu rounded-t-md'>
+                        <div className='hidden-menu rounded-t-md '>
                             <ul className="hidden-list">
                                 <li>
                                     <Link to="/">
@@ -220,25 +225,21 @@ export default function MainHeaders() {
 
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link to="/user-panel">
-                                        پنل کاربری
 
+                                <li >
+                                    <Link to="/articleList">
+
+                                        بلاگ اموزشی
                                     </Link>
+
                                 </li>
                             </ul>
                         </div>
 
                     </li>
 
-                    <li className='main-menu '>
-                        <Link to="/articleList">
 
-                            بلاگ اموزشی
-                        </Link>
-
-                    </li>
-                    <li className='main-menu child-hover:transition-all child:delay-150 '>
+                    <li className='main-menu child-hover:transition-all hidden lg:flex child:delay-150 '>
                         <IoIosArrowDown className='down-icon' />
 
                         سایر صفحات
@@ -274,7 +275,40 @@ export default function MainHeaders() {
                         </div>
 
                     </li>
-                    <li className='main-menu child-hover:transition-all child:delay-150 '>
+                    <li className='main-menu child-hover:transition-all flex lg:hidden child:delay-150 '>
+                        <img src="./images/profile-2.webp" alt="" className='w-12 h-12 rounded-full  object-cover' />
+                        <div className='hidden-menu rounded-t-md left-0 w-36 lg:w-60'>
+                            <ul className="hidden-list">
+                                <li className='hover:text-primaryText'>
+                                    <Link to="/user-panel" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                        <BiUserCircle className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
+                                        مشخصات کاربری
+
+                                    </Link>
+                                </li>
+                                <li className='hover:text-primaryText'>
+                                    <Link to="/user-panel/orders" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                        <BiShoppingBag className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
+
+                                        سفارشات
+
+                                    </Link>
+                                </li>
+                                <li className='hover:text-primaryText'>
+                                    <Link to="/user-panel/address" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                        <FaRegAddressCard className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
+
+                                        ادرس ها
+
+                                    </Link>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li className='main-menu child-hover:transition-all hidden lg:flex child:delay-150 '>
                         <IoIosArrowDown className='down-icon' />
 
                         پروفایل کاربری

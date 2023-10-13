@@ -1,5 +1,4 @@
 .sliders-container {
-  margin: 2rem 7rem;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 0.7fr 2fr;
@@ -9,27 +8,21 @@
   grid-row: 1/2;
 }
 .side-sidebar {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   grid-column: 1/2;
   grid-row: 1/2;
 }
+
 .slider {
   z-index: 1;
 }
 .side-sidebar img {
-  height: 7rem;
-  width: 16rem;
   box-shadow: 0 0 3px var(--text-color);
   border-radius: 4px;
   overflow: hidden;
-  margin: 0.5rem 0;
+
   z-index: 1;
 }
 .slider-img {
-  width: 50rem;
-  height: 23.4rem;
   box-shadow: 0 0 3px var(--text-color);
   border-radius: 4px;
   overflow: hidden;
