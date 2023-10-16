@@ -6,15 +6,15 @@ export default function OffProduct({ img, title, price, percent, time }) {
 
     return (
         <>
-            <div className="flex flex-row-reverse w-2/5   bg-primaryText my-1 mx-2 shadow-md rounded-lg " data-aos="zoom-in" data-aos-duration="1000">
+            <div className="flex flex-row-reverse   w-[29rem]   bg-primaryText my-1 mx-2 shadow-md rounded-lg " data-aos="zoom-in" data-aos-duration="1000">
                 <img src={`./images/${img}`} className='w-1/3 h-[27rem]' />
                 <div className='flex flex-col justify-start items-end w-2/3 mr-5'>
                     <h1 className="text-mainPrimaryLight mt-3 mr-4 text-2xl">محصول ویژه امروز</h1>
                     <p className=" mr-4"> فروش به مدت محدود</p>
-                    <h1 className="text-black text-3xl mt-5  mr-4">{title}</h1>
-                    <div className='flex flex-lg-row-reverse items-center justify-evenly my-5  w-full'>
-                        <span className='text-mainPrimaryLight text-xl  ml-4 mx-3'>{price} تومان</span>
-                        <span className='mr-4 mx-3  line-through text-xl'> {price} تومان</span>
+                    <h1 className="text-black lg:text-2xl text-xl  mt-5  mr-4">{title}</h1>
+                    <div className=' flex  flex-col gap-y-2 lg:flex-row-reverse items-end lg:items-center justify-evenly  my-5   w-full'>
+                        <span className='text-mainPrimaryLight text-lg lg:text-xl ml-1 lg:ml-4 mx-2 lg:mx-3'>{price} تومان</span>
+                        <span className=' mr-1 lg:mr-4 mx-2 lg:mx-3  line-through text-lg lg:text-xl'> {price} تومان</span>
                     </div>
 
                     <span className='flex w-full justify-end overflow-visible text-mainPrimaryLight  cursor-pointer my-2 mr-4 text-xl group '>

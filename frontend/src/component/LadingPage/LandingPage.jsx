@@ -3,7 +3,7 @@ import "./LandingPage.css"
 import Carousel from 'react-bootstrap/Carousel';
 export default function LandingPage() {
     return (
-        <div className='sliders-container block lg:grid container my-4 space-y-3 lg:space-y-0 '>
+        <div className='sliders-container block lg:grid container my-4  '>
             <div className='first-part w-full md:w-82  xl:w-100  lg:ml-2'  >
                 <Carousel className='slider h-full' pause={"hover"} controls={false} fade={true}>
                     <Carousel.Item interval={5000}>
@@ -24,7 +24,7 @@ export default function LandingPage() {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <div className="m-0 side-sidebar  xl:h-full flex sm:flex-row lg:flex-col lg:gap-y-1 space-x-2 lg:space-x-0   ">
+            <div className=" side-sidebar  xl:h-full flex sm:flex-row lg:flex-col lg:space-y-1 space-x-2 lg:space-x-0 mt-2 lg:m-0   ">
                 <img src="./images/side-slide1.jpg" alt="" className=' ' />
                 <img src="./images/side-slide2.jpg" alt="" className=' ' />
                 <img src="./images/side-slide3.jpg" alt="" className=' ' />
