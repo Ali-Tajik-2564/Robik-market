@@ -10,9 +10,9 @@ export default function Footer() {
         <>
             <div >
                 <div className="flex items-center flex-col lg:flex-row-reverse gap-y-3 mt-0 w-full h-70 p-3 text-primaryText bg-mainPrimaryLight ">
-                    <div className="flex flex-row-reverse p-2  items-start w-full lg:w-1/2 justify-evenly ">
+                    <div className="flex flex-row-reverse p-2  text-sm md:text-base items-start w-full lg:w-1/2 justify-evenly ">
                         <ul className='space-y-2 flex flex-col items-end justify-center'>
-                            <li className='text-xl font-bold list-none'>گروه های محصولات</li>
+                            <li className='text-lg lg:text-xl font-bold list-none'>گروه های محصولات</li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="">  گوشی موبایل </Link> </li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> جانبی کامپیوتر </Link></li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> جانبی موبایل </Link> </li>
@@ -21,14 +21,14 @@ export default function Footer() {
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to=""> لپ تاپ </Link> </li>
                         </ul>
                         <ul className='space-y-2 flex flex-col items-end justify-center'>
-                            <li className='text-xl font-bold list-none'>ناحیه کاربری</li>
+                            <li className='text-lg lg:text-xl font-bold list-none'>ناحیه کاربری</li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/login">  ورود به سایت  </Link></li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="register"> عضویت در سایت </Link></li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/user-basket"> سبد خرید  </Link>  </li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/factor"> پیش فاکتور </Link>  </li>
                         </ul>
                         <ul className='space-y-2 flex flex-col items-end justify-center'>
-                            <li className='text-xl font-bold list-none '>دسترسی سریع</li>
+                            <li className='text-lg lg:text-xl font-bold list-none '>دسترسی سریع</li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/articleList">  بلاگ اموزشی </Link> </li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer"><Link to="/questions"> سوالات متداول </Link> </li>
                             <li className="list-none hover:text-gray-400 hover:cursor-pointer" onClick={() => scroll(0, 0)}>تماس با ما</li>
