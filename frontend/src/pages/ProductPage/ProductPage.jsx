@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
-
+import "./productPage.css"
 import { BsStarFill } from "react-icons/bs"
 import { BsStarHalf } from "react-icons/bs"
 import Title from '../../component/Title/Title';
@@ -33,9 +33,9 @@ export default function ProductPage() {
 
             <HeaderPage title="گوشی موبایل سامسونگ مدل Galaxy A21s" subtitle="دارای قابلیت دو سیم کارته و حافظه 128 گیگابایت" route="خانه" />
 
-            <div className='w-full h-70 p-8 my-5 flex flex-row-reverse'>
+            <div className='w-full h-70 p-8 my-5 flex flex-col items-start justify-start lg:flex-row-reverse'>
 
-                <div className="w-1/3 h-full" >
+                <div className=" w-2/3 md:w-1/2 lg:w-1/3 h-[20rem] mx-auto" >
                     <Swiper
                         cssMode={true}
                         navigation={true}
@@ -53,8 +53,8 @@ export default function ProductPage() {
                     </Swiper>
 
                 </div>
-                <div className='w-[60%] flex flex-col items-end justify-start space-y-3 mx-3 h-2/4 p-3 '>
-                    <h3 className="text-3xl font-bold">گوشی موبایل سامسونگ مدل Galaxy A21s</h3>
+                <div className='w-full lg:w-[60%] flex flex-col items-end justify-start space-y-3 mx-3 h-2/4 p-3 '>
+                    <h3 className="text-xl md:text-3xl font-bold">گوشی موبایل سامسونگ مدل Galaxy A21s</h3>
                     <span className='space-x-1 flex '>
                         <BsStarFill className="text-yellow-400" />
                         <BsStarFill className="text-yellow-400" />
@@ -63,7 +63,7 @@ export default function ProductPage() {
                         <BsStarHalf className="text-yellow-400" />
                         <p className='text-sm font-medium'>(نقد و بررسی)</p>
                     </span>
-                    <span className="text-2xl font-bold text-yellow-400  flex flex-row-reverse "> 3.500.000  <span className='text-xl mx-1'>  تومان </span></span>
+                    <span className="text-lg md:text-2xl font-bold text-yellow-400  flex flex-row-reverse "> 3.500.000  <span className='text-xl mx-1'>  تومان </span></span>
                     <p className="text-right font-medium h-26 border-b-4 border-opacity-50   border-gray-300 rounded-sm p-2">این یک متن آزمایشی است که به زودی توسط نویسنده این سایت، تکمیل یا حذف خواهد شد. اگر شما نویسنده‌ی این سایت هستید، برای حذف یا ویرایش این صفحه، کافی است از طریق مرکز مدیریت سایت خود وارد بخش مربوطه شده و محتوای این صفحه را ویرایش یا حذف کنید.
                         صفحات و محتوای آزمایشی همیشه بخشی از محتوای پیش‌نمایش قالب و افزونه های وب هستند که شما بتوانید ارتباط درستی با پیش نمایش قالب گرفته و تصمیم مناسبی بگیرید.
 
@@ -73,7 +73,7 @@ export default function ProductPage() {
 
                     <div className='flex flex-col items-end justify-start space-y-2 mx3 p-3 w-full '>
                         <h2 className='text-xl'>گزینه های موجود:</h2>
-                        <table className='w-[60%]' >
+                        <table className='w-full md:w-[60%]' >
                             <thead className='   '>
                                 <tr className='text-center'>
                                     <td>تعداد</td>
@@ -211,10 +211,22 @@ export default function ProductPage() {
             </div>
             <div className="w-full">
                 <Title title="محصولات مرتبط" subTitle="" />
-                <div className="mb-4" >
+                <div className="mb-4 mx-10" >
                     <Swiper
-                        slidesPerView={4}
-
+                        slidesPerView={1}
+                        spaceBetween={10}
+                        breakpoints={{
+                            // when window width is >= 640px
+                            640: {
+                                width: 640,
+                                slidesPerView: 2,
+                            },
+                            // when window width is >= 768px
+                            768: {
+                                width: 768,
+                                slidesPerView: 2,
+                            },
+                        }}
                         dir="rtl"
                         navigation={true}
                         pagination={{
