@@ -8,7 +8,7 @@ export default function OffProduct({ img, title, price, percent, time }) {
         <>
             <div className="flex flex-row-reverse   w-[29rem]   bg-primaryText my-1 mx-2 shadow-md rounded-lg " data-aos="zoom-in" data-aos-duration="1000">
                 <img src={`./images/${img}`} className='w-1/3 h-[27rem]' />
-                <div className='flex flex-col justify-start items-end w-2/3 mr-5'>
+                <div className='flex flex-col justify-start items-end w-2/3 mr-7'>
                     <h1 className="text-mainPrimaryLight mt-3 mr-4 text-2xl">محصول ویژه امروز</h1>
                     <p className=" mr-4"> فروش به مدت محدود</p>
                     <h1 className="text-black lg:text-2xl text-xl  mt-5  mr-4">{title}</h1>

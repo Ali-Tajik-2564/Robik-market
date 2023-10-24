@@ -8,11 +8,11 @@ export default function ArticlePage() {
     return (
         <div>
             <HeaderPage title="گلکسی S21 اولترا 5g" subtitle="سامسونگ برای گوشی پرچم‌دارش، یعنی گلکسی S21 اولترا 5G، علاوه‌بر رنگ‌های قبلی، رنگ جدید سرمه‌ای را معرفی کرد." route="خانه" />
-            <div className="w-[90%] flex  flex-row-reverse p-6 mx-auto ">
-                <div className="w-3/4 mx-2 p-2 border-b-2 border-gray-300">
-                    <span className='w-full m-2 flex flex-row-reverse justify-between items-center border-b-2 border-black rounded-sm '>
-                        <h3 className="w-full text-2xl font-bold text-right pb-3 ">آموزش نصب قالب وردپرسی روبیک مارکت</h3>
-                        <p className='text-sm font-semibold w-1/2 '>ارسال شده در 22 تیر 1400</p>
+            <div className="w-[95%] flex  flex-row-reverse p-6 mx-auto ">
+                <div className="w-full xl:w-3/4 xl:mx-2 mx-auto p-2 border-b-2 border-gray-300">
+                    <span className='w-full m-1 flex flex-row-reverse pb-3 justify-between items-center border-b-2 border-black rounded-sm '>
+                        <h3 className="w-full text-base xm:text-lg md:text-2xl font-bold text-right  ">آموزش نصب قالب وردپرسی روبیک مارکت</h3>
+                        <p className='text-xs md:text-sm font-semibold w-1/2 '>ارسال شده در 22 تیر 1400</p>
                     </span>
 
                     <img src="../images/side-product.jpg" alt="" className="w-[70%] mx-auto my-4 rounded-lg" />
@@ -32,7 +32,7 @@ export default function ArticlePage() {
 
 
                 </div>
-                <div className="w-1/4 px-2">
+                <div className="w-1/4 px-2 xl:block hidden">
                     <h3 className="w-full text-xl font-bold text-right pb-3 border-b-2 border-black rounded-sm m-2">پربازدیدترین محصولات</h3>
                     <div className=' space-y-2 p-2 '>
                         <SideProductBox img="side-product.jpg" title="گوشی موبایل سامسونگ مدل دو سیم کارته  120 گیگ" price="۶.۵۰۰.۰۰۰" />

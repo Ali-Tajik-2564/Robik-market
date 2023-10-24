@@ -12,6 +12,12 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import Footer from '../../component/Footer/Footer'
 import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Mousewheel, Keyboard, FreeMode } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
 export default function Index() {
     AOS.init()
     return (
@@ -94,7 +100,7 @@ export default function Index() {
             <div className=' w-full bg-primaryText p-2 mt-0 h-auto  '>
 
                 <Title title="فروش ویژه" subTitle="محصولات دارای تخفیف ویژه به مدت محدود" />
-                <div className='w-full flex-wrap-reverse gap-y-3 my-6 flex justify-evenly items-center'>
+                <div className='w-full flex-wrap-reverse gap-y-3 my-6 hidden xl:flex justify-evenly items-center'>
                     <div className="flex lg:flex-row flex-col justify-center items-center gap-4">
                         <Link to="/products/3" className='decoration-0 list-none'>
                             <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
@@ -142,6 +148,143 @@ export default function Index() {
                     </div>
                     <OffProduct title="گوشی موبایل سامسونگ" img="megamenu-image1.png" price="7-000-000" percent="32" time="2023 / 9 / 19" />
                 </div>
+                <div className='w-full   xl:hidden '>
+                    <div className="mb-4  flex item-end  " >
+                        {/* <Swiper
+                            slidesPerView={2}
+                            spaceBetween={80}
+
+                            dir='rtl'
+                            direction='rtl'
+                            navigation={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Navigation, Pagination]}
+                            className="mySwiper ">
+
+
+
+                            <SwiperSlide className='w-[29rem] z-10'>
+
+                                <OffProduct title="گوشی موبایل سامسونگ" img="megamenu-image1.png" price="7-000-000" percent="32" time="2023 / 9 / 19" />
+
+                            </SwiperSlide>
+
+                            <SwiperSlide >
+                                <Link to="/products/3" className='decoration-0 list-none'>
+                                    <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                        <p className='product-info '>
+                                            <span className='product-info-item text-mainPrimaryLight'>6.000.000 تومان</span>
+                                            <span className='product-info-item flex justify-end  gap-x-2'>
+                                                <span>(۱۲ رای دهنده) </span>
+                                                <span className='flex'>
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+
+                                                    <BsStarHalf className="text-mainPrimaryLight" />
+                                                </span>
+                                            </span >
+
+
+                                        </p>
+                                    </ProductBox>
+                                </Link></SwiperSlide>
+                            <SwiperSlide >
+                                <Link to="/products/3" className='decoration-0 list-none'>
+                                    <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                        <p className='product-info '>
+                                            <span className='product-info-item text-mainPrimaryLight'>6.000.000 تومان</span>
+                                            <span className='product-info-item flex justify-end  gap-x-2'>
+                                                <span>(۱۲ رای دهنده) </span>
+                                                <span className='flex'>
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+
+                                                    <BsStarHalf className="text-mainPrimaryLight" />
+                                                </span>
+                                            </span >
+
+
+                                        </p>
+                                    </ProductBox>
+                                </Link></SwiperSlide>
+
+
+                        </Swiper> */}
+                        <Swiper
+                            slidesPerView={"auto"}
+                            spaceBetween={10}
+
+                            centeredSlides={false}
+
+
+
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                        >
+                            <SwiperSlide className='flex items-center justify-center' >
+                                <OffProduct title="گوشی موبایل سامسونگ" img="megamenu-image1.png" price="7-000-000" percent="32" time="2023 / 9 / 19" />
+
+                            </SwiperSlide>
+                            <SwiperSlide className='flex items-center justify-center' ><Link to="/products/3" className='decoration-0 list-none'>
+                                <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                    <p className='product-info '>
+                                        <span className='product-info-item text-mainPrimaryLight'>6.000.000 تومان</span>
+                                        <span className='product-info-item flex justify-end  gap-x-2'>
+                                            <span>(۱۲ رای دهنده) </span>
+                                            <span className='flex'>
+                                                <BsStarFill className="text-mainPrimaryLight" />
+                                                <BsStarFill className="text-mainPrimaryLight" />
+                                                <BsStarFill className="text-mainPrimaryLight" />
+                                                <BsStarFill className="text-mainPrimaryLight" />
+
+                                                <BsStarHalf className="text-mainPrimaryLight" />
+                                            </span>
+                                        </span >
+
+
+                                    </p>
+                                </ProductBox>
+                            </Link></SwiperSlide>
+                            <SwiperSlide className='flex items-center justify-center' >
+
+                                <Link to="/products/3" className='decoration-0 list-none'>
+                                    <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
+
+                                        <p className='product-info '>
+                                            <span className='product-info-item text-mainPrimaryLight'>6.000.000 تومان</span>
+                                            <span className='product-info-item flex justify-end  gap-x-2'>
+                                                <span>(۱۲ رای دهنده) </span>
+                                                <span className='flex'>
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+                                                    <BsStarFill className="text-mainPrimaryLight" />
+
+                                                    <BsStarHalf className="text-mainPrimaryLight" />
+                                                </span>
+                                            </span >
+
+
+                                        </p>
+                                    </ProductBox>
+                                </Link></SwiperSlide>
+
+                        </Swiper>
+                    </div>
+                </div>
+
             </div >
             <div data-aos="zoom-in" data-aos-duration="1000" className="bg-white grid grid-cols-2 grid-rows-2 lg:flex lg:flex-row-reverse lg:justify-evenly w-[90%] h-30 my-3 p-4 lg:items-center border-b-3 mx-auto ">
                 <div className="flex mx-auto flex-row-reverse justify-center items-center w-48">
