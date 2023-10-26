@@ -5,7 +5,7 @@ initTE({ Datepicker, Input, Collapse }, { allowReinits: true });
 export default function NewProductsAccording({ title }) {
 
     return (
-        <div className='w-full'>
+        <div className='w-full '>
             <div
                 class="rounded-t-lg border border-neutral-200 bg-primaryText shadow-sm shadow-shadowPrimary dark:border-neutral-600 dark:bg-neutral-800">
                 <h2 class="mb-0" id="headingTwo">

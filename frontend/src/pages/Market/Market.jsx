@@ -12,10 +12,10 @@ export default function Market() {
     const [category, setCategory] = useState("")
     const [gridItem, setGridItem] = useState("chart")
     return (
-        <div className=' bg-primaryText h-[100%] '>
+        <div className=' bg-primaryText h-auto '>
             <HeaderPage title="فروشگاه روبیک مارکت" subtitle="هر آنچه نیاز دارید در این فروشگاه موجود است" route="خانه" />
-            <div className=' container mx-auto flex flex-row-reverse justify-between items-start p-4   '>
-                <div className="w-1/4 h-full flex flex-col justify-start gap-y-5  ">
+            <div className='  mx-auto flex flex-col lg:flex-row-reverse justify-between items-start p-4   '>
+                <div className="w-full lg:w-1/4 h-full flex flex-col justify-start gap-y-5  ">
                     <CategoryFilter title="گروه های محصولات" categories={["گوشی موبایل", "جانبی موبایل", "دوربین دیجیتال", "ساعت هوشمند", "لپ تاپ"]} setCategoryValue={setCategory} />
                     <div className="w-full flex gap-x-5 items-center justify-end p-2 rounded-sm text-mainPrimaryLight bg-primaryText">
                         <span>فقط کالا های موجود</span>
@@ -27,9 +27,10 @@ export default function Market() {
                         <input type="checkbox" name="garenty" className="w-4 h-4 bg-shadowPrimary checked:border-4  rounded-full checked:border-blue-500 appearance-none checked:shadow-lg checked:shadow-blue-600" />
 
                     </div>
-                    <NewProductsAccording title="جدید ترین محصولات" />
+                    <div className="hidden lg:block">
+                        <NewProductsAccording title="جدید ترین محصولات" /></div>
                 </div>
-                <div className="w-3/4 h-full flex flex-col mx-2 items-start  gap-y-5  ">
+                <div className="w-full lg:w-3/4 h-full flex flex-col mx-2 items-start  gap-y-5  ">
                     <div className="w-full px-2 flex flex-row-reverse items-start py-2 justify-between border-b-2 border-mainPrimaryLight/50 ">
                         <span className='text-lg font-medium text-mainPrimaryLight'>
                             تعداد کالای موجود : 200
@@ -46,7 +47,7 @@ export default function Market() {
                         </div>
                     </div>
                     {gridItem === "chart" && (
-                        <div className="w-full grid grid-cols-3 grid-rows-4  mx-2 gap-2">
+                        <div className="w-full flex  items-center justify-center lg:flex-nowrap flex-wrap mx-2 gap-1">
                             <Link to="/products/3" className='decoration-0 list-none'>
                                 <ProductBox img={"/slide2.jpg"} title={"گوشی موبایل سامسونگ"} route="گوشی موبایل  /  سامسونگ" >
 
@@ -239,7 +240,7 @@ export default function Market() {
                     )}
                     {
                         gridItem === "grid" && (
-                            <div className="w-full h-full mx-2 flex flex-col items-center justify-start gap-y-4">
+                            <div className="w-full h-full mx-2 flex flex-col  items-center justify-start gap-y-4">
                                 <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />
                                 <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />
                                 <GridProductBox img={"/phone1.webp"} title={"گوشی موبایل سامسونگ"} price={600_000} route="گوشی موبایل  /  سامسونگ" star={4} voteCount={14} desc="گوشی موبایل Galaxy A51 با رم 6 گیگابایتی روانه بازار شده است. این محصول دارای صفحه‌نمایش سوپر آمولد است و ظاهر زیبایی دارد. سامسونگ تلاش کرده است حاشیه را در این تولید جدید خود تا حد امکان کم کند." />

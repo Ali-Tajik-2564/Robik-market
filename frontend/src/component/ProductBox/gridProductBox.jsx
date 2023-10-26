@@ -9,20 +9,20 @@ export default function GridProductBox({ title, img, desc, price, star, route, v
     console.log(emptyStar);
     return (
         <div
-            class=" max-w-full  flex mx-3  flex-row-reverse rounded-xl overflow-hidden bg-primaryText shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700   hover:opacity-95 transition-all duration-150 ease-out" >
+            class=" max-w-full h-64 sm:h-80 md:h-96  flex mx-3  flex-row-reverse rounded-xl overflow-hidden bg-primaryText shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700   hover:opacity-95 transition-all duration-150 ease-out" >
             <img
-                class="h-96 w-1/3 rounded-t-lg  bg-none object-cover md:h-auto md:!rounded-none md:!rounded-l-lg"
+                class="h-64 sm:h-80 md:h-96 w-[12rem] sm:w-[16rem] md:w-[19rem] rounded-t-lg  bg-none object-cover  md:!rounded-none md:!rounded-l-lg"
                 src={`../images/${img}`}
                 alt="" />
-            <div class="w-full flex flex-col justify-end items-end p-6 gap-y-4">
+            <div class="w-full h-full flex flex-col justify-evently items-end lg:p-6 p-3 gap-y-2 lg:gap-y-4">
                 <p className="text-xs font-medium text-gray-500">{route}</p>
                 <h2
-                    class="mb-2 text-2xl font-medium text-mainPrimary dark:text-neutral-50">
+                    class="mb-2 text-base sm:text-lg md:text-2xl font-medium text-mainPrimary dark:text-neutral-50">
                     {title}
                 </h2>
                 <div className='flex items-center justify-center gap-x-2'>
-                    <p className="text-base font-normal">تعداد نظرات ({voteCount})</p>
-                    <span className='flex items-center justify-center text-mainPrimaryLight  '>
+                    <p className="text-xs md:text-base font-normal">تعداد نظرات ({voteCount})</p>
+                    <span className='flex text-sm lg:text-base items-center justify-center text-mainPrimaryLight  '>
                         {fillStar.map(() => (
                             <BsStarFill />
                         ))}
@@ -33,10 +33,10 @@ export default function GridProductBox({ title, img, desc, price, star, route, v
                         }
                     </span>
                 </div>
-                <p class="mb-4 text-base font-medium text-end text-neutral-600 dark:text-neutral-200 line-clamp-4">
+                <p class="mb-4 text-sm lg:text-base font-medium text-end text-neutral-600 dark:text-neutral-200 line-clamp-1 sm:line-clamp-2 md:line-clamp-4">
                     {desc}
                 </p>
-                <p class=" flex items-center gap-x-1 justify-end text-mainPrimaryLight dark:text-neutral-300">
+                <p class=" flex  text-sm lg:text-base  items-center gap-x-1 justify-end text-mainPrimaryLight dark:text-neutral-300">
                     <span className='text-xs '>تومان</span>
                     <span className='text-base'>{price}</span>
                 </p>

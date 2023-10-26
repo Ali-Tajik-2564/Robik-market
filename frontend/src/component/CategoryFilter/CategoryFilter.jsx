@@ -15,7 +15,7 @@ export default function CategoryFilter({ title, categories, setCategoryValue }) 
                         type="button"
                         data-te-collapse-init
                         data-te-target="#collapseOne"
-                        aria-expanded="true"
+                        aria-expanded="flase"
                         aria-controls="collapseOne">
                         <span className='ml-auto  '>
 
