@@ -6,8 +6,8 @@ export default function Register() {
         <div className='w-full  '>
             <HeaderPage title="عضویت در سایت" subtitle="با عضویت در سایت از همه امکانات روبیک مارکت بهره مند شوید." route="خانه" />
             <div className="container p-4 my-10 w-full h-auto flex flex-row-reverse items-center gap-x-4 justify-between">
-                <img src="./images/register.png" alt="" className='w-1/2 h-full object-cover text-center  m-3 bg-none' />
-                <div className="w-1/2    flex-col text-right items-center space-y-4">
+                <img src="./images/register.png" alt="" className='w-1/2 hidden md:block h-full object-cover text-center  m-3 bg-none' />
+                <div className=" w-full md:w-1/2    flex-col text-right items-center space-y-4">
                     <h1 className='text-2xl font-semibold  text-mainPrimary  '>عضویت در روبیک مارکت</h1>
                     <p className="text-lg font-medium text-mainPrimaryLight">با عضویت در سایت از همه امکانات سایت بهره مند شوید.</p>
                     <div>

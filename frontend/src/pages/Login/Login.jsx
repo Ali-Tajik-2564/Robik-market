@@ -3,13 +3,13 @@ import HeaderPage from '../../component/HeaderPage/HeaderPage'
 import { Link } from 'react-router-dom'
 export default function Login() {
     return (
-        <div className='w-full '>
+        <div className='w-full  '>
             <HeaderPage title="ورود به ناحیه کاربری" subtitle="وارد ناحیه کاربری خود در روبیک مارکت شوید." route="خانه" />
-            <div className="container p-3 w-full h-auto flex flex-row-reverse items-center gap-x-4 justify-between">
-                <img src="./images/login.jpg" alt="" className='w-1/2 h-full object-cover text-center  m-3 bg-none' />
-                <div className="w-1/2   my-10 flex-col text-right items-center space-y-4">
+            <div className=" container p-3 w-full h-auto flex flex-row-reverse items-center gap-x-4 justify-between">
+                <img src="./images/login.jpg" alt="" className='lg:w-1/2 w-full lg:block hidden h-full object-cover text-center  m-3 bg-none' />
+                <div className="w-full lg:w-1/2   my-10 flex-col text-right items-center space-y-4">
                     <h1 className='text-2xl font-semibold  text-mainPrimary  '>وارد شوید</h1>
-                    <p className="text-lg font-medium text-mainPrimaryLight">با ورود به ناحیه کاربری خود از همه امکانات سایت بهره مند شوید.     </p>
+                    <p className="text-base lg:text-lg font-medium text-mainPrimaryLight">با ورود به ناحیه کاربری خود از همه امکانات سایت بهره مند شوید.     </p>
 
 
                     <div>
