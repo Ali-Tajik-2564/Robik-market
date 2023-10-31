@@ -6,8 +6,8 @@ export default function BasketFactor() {
     return (
         <div className="bg-shadowPrimary">
             <HeaderPage title="پیش فاکتور" subtitle="با تکیمل پرداخت فاکتور، خرید خود را تکمیل کنید." route="خانه" />
-            <div className=" flex w-[90%] mt-4 mx-auto p-3 items-start     gap-x-3">
-                <div className="w-1/4 flex flex-col items-center bg-primaryText  shadow-sm   border border-gray-50 rounded-sm p-2 space-y-4 ">
+            <div className=" flex xl:flex-row flex-col-reverse w-[95%] mt-4 mx-auto p-3 items-start     gap-x-3">
+                <div className="w-full xl:w-1/4 flex flex-col items-center bg-primaryText  shadow-sm   border border-gray-50 rounded-sm p-2 space-y-4 ">
                     <div className="w-full border-b border-b-gray-300 p-2">
                         <div className='flex w-full m-2 flex-row-reverse justify-between text-lg rounded-sm font-bold p-3'>
                             <span> : جمع کل فاکتور</span>
@@ -47,13 +47,13 @@ export default function BasketFactor() {
                         </div>
                     </div>
                 </div>
-                <div className="w-3/4    space-y-4 ">
+                <div className="w-full xl:w-3/4    space-y-4 ">
                     <div className="w-full border rounded-sm p-4 space-y-3 bg-primaryText  shadow-sm">
                         <h2 className='text-xl font-bold text-mainPrimary text-right '>آدرس تحویل سفارش</h2>
-                        <div className='flex justify-evenly flex-row-reverse items-center'>
-                            <div className="w-3/4 p-3 border border-slate-100 rounded-lg space-y-2 " >
-                                <h3 className=" w-full text-right text-lg line-clamp-1 font-semibold">فارس، شیراز، بلوار آزادگان، کارخانه نوآوری شیراز،</h3>
-                                <span className='w-full text-base font-medium flex flex-row-reverse items-center justify-between'>
+                        <div className='flex justify-evenly flex-col md:flex-row-reverse items-center'>
+                            <div className="w-full md:w-3/4 p-3 border border-slate-100 rounded-lg space-y-2 " >
+                                <h3 className=" w-full text-right text-base md:text-lg line-clamp-1 font-semibold">فارس، شیراز، بلوار آزادگان، کارخانه نوآوری شیراز،</h3>
+                                <span className='w-full text-sm md:text-base font-medium flex flex-row-reverse items-center justify-between'>
                                     <p>
                                         کدپستی: 1234567890
                                     </p>
@@ -62,14 +62,14 @@ export default function BasketFactor() {
                                     </p>
                                 </span>
                             </div>
-                            <div className='w-1/4'>
+                            <div className=' w-full md:w-1/4'>
                                 <button className=' w-[90%] h-14 p-2 m-2 border border-zinc-700 rounded-lg text-center transition-colors duration-100 hover:text-white hover:bg-zinc-700'> <Link>  افزودن ادرس جدید </Link> </button>
                             </div>
                         </div>
                     </div>
                     <div className='max-w-full border rounded-sm p-3 space-y-3 bg-primaryText  shadow-sm'>
                         <h2 className='text-xl font-bold text-mainPrimary text-right '>سفارشات شما</h2>
-                        <div className="w-full max-h-[50rem] flex flex-row-reverse flex-wrap    p-1  overflow-y-auto">
+                        <div className="w-full max-h-[50rem] flex flex-row-reverse flex-wrap justify-center    p-1  overflow-y-auto">
 
                             <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
                                 <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />

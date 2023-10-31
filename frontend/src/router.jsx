@@ -1,5 +1,6 @@
 import Basket from "./component/Basket/Basket";
 import BasketFactor from "./component/Basket/BasketFactor";
+import ArticleList from "./pages/ArticlePage/ArticleList";
 import ArticlePage from "./pages/ArticlePage/ArticlePage";
 import Login from "./pages/Login/Login";
 import Market from "./pages/Market/Market";
@@ -31,6 +32,9 @@ const routes = [
     },
     {
         path: "/login", element: <Login />,
+    },
+    {
+        path: "/articleList", element: <ArticleList />,
     },
 ]
 export default routes
