@@ -280,26 +280,25 @@ export default function MainHeaders() {
                         <div className='hidden-menu rounded-t-md left-0 w-36 lg:w-60'>
                             <ul className="hidden-list">
                                 <li className='hover:text-primaryText'>
-                                    <Link to="/user-panel" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                    <Link to="/my-account" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
                                         <BiUserCircle className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
                                         مشخصات کاربری
 
                                     </Link>
                                 </li>
                                 <li className='hover:text-primaryText'>
-                                    <Link to="/user-panel/orders" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                    <Link to="/my-account/my-address" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
                                         <BiShoppingBag className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
 
-                                        سفارشات
+                                        ادرس ها
 
                                     </Link>
                                 </li>
                                 <li className='hover:text-primaryText'>
-                                    <Link to="/user-panel/address" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                    <Link to="/my-account/edit-account" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
                                         <FaRegAddressCard className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
 
-                                        ادرس ها
-
+                                        ویرایش اطلاعات
                                     </Link>
                                 </li>
 

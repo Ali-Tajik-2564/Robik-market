@@ -7,6 +7,10 @@ import Market from "./pages/Market/Market";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import Register from "./pages/Register/Register";
 import Index from "./pages/index/Index";
+import UserIndex from "./pages/userIndex/userIndex";
+import MainIndex from "./component/UserPanel/MainIndex";
+import UserEditInfo from "./component/UserPanel/UserEditInfo";
+import UserAddress from "./component/UserPanel/UserAddress";
 
 const routes = [
     {
@@ -35,6 +39,18 @@ const routes = [
     },
     {
         path: "/articleList", element: <ArticleList />,
+    },
+    {
+        path: "/my-account", element: <UserIndex />, children: [
+
+            { path: "", element: <MainIndex /> },
+            { path: "my-address", element: <UserAddress /> },
+
+            { path: "edit-account", element: <UserEditInfo /> },
+
+
+
+        ]
     },
 ]
 export default routes
