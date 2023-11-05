@@ -314,21 +314,20 @@ export default function MainHeaders() {
                         <div className='hidden-menu rounded-t-md'>
                             <ul className="hidden-list">
                                 <li>
-                                    <Link to="/user-panel" >
+                                    <Link to="/my-account" >
                                         مشخصات کاربری
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/user-panel/orders">
-                                        سفارشات
+                                    <Link to="/my-account/my-address">
+                                        ادرس ها
 
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/user-panel/address">
-                                        ادرس ها
-
+                                    <Link to="/my-account/edit-account">
+                                        ویرایش اطلاعات
                                     </Link>
                                 </li>
 

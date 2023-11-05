@@ -12,8 +12,8 @@ export default function UserIndex() {
         <div>
             <HeaderPage title="ناحیه کاربری" subtitle="به ناحیه کاربری روبیک مارکت خوش آمدید." route="خانه" />
 
-            <div className='W-full py-5 px-3 flex justify-center items-center lg:flex-row-reverse flex-col gap-5'>
-                <div className="w-1/4">
+            <div className='W-full py-5 px-3 flex justify-center items-start lg:flex-row-reverse flex-col gap-5'>
+                <div className="w-full lg:w-1/4">
 
                     <div
                         class="rounded-t-sm border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
@@ -41,7 +41,7 @@ export default function UserIndex() {
                                     </svg>
                                 </span>
                                 <div className='flex item-center justify-center flex-row-reverse gap-x-3'>
-                                    <img src="./images/profile-1.png" alt="" className='w-10 h-10 mx-1 rounded-full object-cover' />
+                                    <img src="./../images/profile-1.png" alt="" className='w-10 h-10 mx-1 rounded-full object-cover' />
                                     <span className='flex flex-col items-center justify-center'>
                                         <h2 className='text-lg font-semibold text-mainPrimary'>مصطفی کلانتری</h2>
                                         <p className='text-xs font-thin text-mainPrimaryLight'>09195729509</p>
@@ -55,7 +55,7 @@ export default function UserIndex() {
                             data-te-collapse-item
                             data-te-collapse-show
                             aria-labelledby="headingOne5">
-                            <div class="px-3 py-3 flex flex-col items-end justify-end mx-3 gap-y-3">
+                            <div class=" px-3 py-3 flex flex-col items-end justify-end mx-3 gap-y-3">
                                 <Link to="" >
                                     <span className="flex flex-row items-center justify-e nd gap-x-2 ">
                                         <p className="text-base font-light hover:text-mainPrimaryLight">اطلاعات حساب کاربری</p>
@@ -89,13 +89,25 @@ export default function UserIndex() {
 
                                     </span>
                                 </Link>
+                                <Link to="/" >
+                                    <span className="flex flex-row items-center justify-end gap-x-2  mt-2" >
+                                        <p className="text-base font-light hover:text-mainPrimaryLight">خروج از حساب</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainPrimary rotate-180">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                                        </svg>
+
+
+
+
+                                    </span>
+                                </Link>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div className="w-3/4">
-
+                <div className="w-full lg:w-3/4">
+                    <Outlet />
                 </div>
 
             </div>
