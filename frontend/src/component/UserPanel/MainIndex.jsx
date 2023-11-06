@@ -36,6 +36,74 @@ export default function MainIndex() {
                 </div>
 
             </div>
+            <div className="last-orders mt-5 ">
+                <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-2">اخرین سفارشات</h1>
+                <div className="flex item-center justify-center  gap-x-2">
+                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                        <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                        <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                            گوشی موبایل سامسونگ مدل Galaxy A21s
+                            دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                        </h2>
+                        <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                            <span className='flex gap-x-1 text-base items-center'>
+                                <p className='text-mainPrimaryLight'>تعداد</p>
+                                <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                            </span>
+                            <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                <p>تومان</p>
+                                <p>6.000.000</p>
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                        <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                        <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                            گوشی موبایل سامسونگ مدل Galaxy A21s
+                            دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                        </h2>
+                        <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                            <span className='flex gap-x-1 text-base items-center'>
+                                <p className='text-mainPrimaryLight'>تعداد</p>
+                                <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                            </span>
+                            <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                <p>تومان</p>
+                                <p>6.000.000</p>
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                        <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
+                        <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
+                            گوشی موبایل سامسونگ مدل Galaxy A21s
+                            دارای قابلیت دو سیم کارته و حافظه 128 گیگا بایت"
+                        </h2>
+                        <div className='w-full flex flex-row-reverse justify-between items-center p-2 mt-5 '>
+                            <span className='flex gap-x-1 text-base items-center'>
+                                <p className='text-mainPrimaryLight'>تعداد</p>
+                                <input type="text" disabled className='w-6 h-6 p-1 bg-shadowPrimary text-mainPrimaryLight rounded-sm text-center ' placeholder='2' />
+
+
+                            </span>
+                            <span className='flex  gap-x-1 text-mainPrimaryLight text-base'>
+                                <p>تومان</p>
+                                <p>6.000.000</p>
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </div>
     )
