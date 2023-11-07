@@ -38,8 +38,9 @@ export default function MainIndex() {
             </div>
             <div className="last-orders mt-5 ">
                 <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-2">اخرین سفارشات</h1>
-                <div className="flex item-center justify-center  gap-x-2">
-                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                <div className="w-full  flex flex-row-reverse flex-wrap  justify-center  item-center  gap-x-3  overflow-x-auto">
+
+                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-1">
                         <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
                         <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
                             گوشی موبایل سامسونگ مدل Galaxy A21s
@@ -60,7 +61,7 @@ export default function MainIndex() {
                         </div>
 
                     </div>
-                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-1">
                         <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
                         <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
                             گوشی موبایل سامسونگ مدل Galaxy A21s
@@ -81,7 +82,7 @@ export default function MainIndex() {
                         </div>
 
                     </div>
-                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-3">
+                    <div className=" w-64 h-96 bg-primaryText  rounded-sm shadow-shadowPrimary shadow-sm my-3 mx-1">
                         <img src={`.././images/phone1.webp`} alt="" className='w-full overflow-hidden rounded-sm h-[50%]' />
                         <h2 className="w-full text-lg text-right font-semibold text-mainPrimary line-clamp-2 p-1 mt-4">
                             گوشی موبایل سامسونگ مدل Galaxy A21s
