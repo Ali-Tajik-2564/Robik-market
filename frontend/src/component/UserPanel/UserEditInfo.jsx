@@ -5,8 +5,11 @@ export default function UserEditInfo() {
     const [nationalCode, setNationalCode] = useState("1234567890")
     const [phoneNumber, setPhoneNumber] = useState("09351234567")
     const [email, setEmail] = useState("email@website.com")
-    const [creditCard, setCreditCard] = useState("email@website.com")
+    const [creditCard, setCreditCard] = useState("6219-8619-3933-1236")
     const [password, setPassword] = useState("123456")
+    const [postalCode, setPostalCode] = useState("1234567890")
+    const [receiverName, setReceiverName] = useState("مصطفی کلانتری")
+    const [address, setAddress] = useState("فارس، شیراز، بلوار آزادگان، کارخانه نوآوری شیراز،")
 
     const editName = () => {
         const inputValue = userName;
@@ -160,14 +163,89 @@ export default function UserEditInfo() {
 
         }
     }
+    const editAddress = () => {
+        const inputValue = address;
+        const { value: EditedInfo } = Swal.fire({
+            title: "لطفا ادرس خود را وارد نمایید",
+            input: "text",
+
+            inputValue,
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "لطفا ادرس خود را وارد نمایید";
+                }
+            }
+        });
+        if (EditedInfo.isConfirmed) {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "ادرس شما با موفقیت ویرایش شد",
+                showConfirmButton: true,
+                timer: 1500
+            });
+
+        }
+    }
+    const editReceiverName = () => {
+        const inputValue = receiverName;
+        const { value: EditedInfo } = Swal.fire({
+            title: "لطفا نام دریافت کننده   را وارد نمایید",
+            input: "text",
+
+            inputValue,
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "لطفا نام دریافت کننده   را وارد نمایید";
+                }
+            }
+        });
+        if (EditedInfo.isConfirmed) {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "نام دریافت کننده   با موفقیت ویرایش شد",
+                showConfirmButton: true,
+                timer: 1500
+            });
+
+        }
+    }
+    const editedPostalCode = () => {
+        const inputValue = postalCode;
+        const { value: EditedInfo } = Swal.fire({
+            title: "لطفا کد پستی خود را وارد نمایید",
+            input: "text",
+
+            inputValue,
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "لطفا کد پستی خود را وارد نمایید";
+                }
+            }
+        });
+        if (EditedInfo.isConfirmed) {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "کد پستی شما با موفقیت ویرایش شد",
+                showConfirmButton: true,
+                timer: 1500
+            });
+
+        }
+    }
     return (
         <div>
             <div className="personal-info">
                 <h1 className="text-xl text-right font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-2">اطلاعات شخصی</h1>
 
                 <div className='w-full  flex flex-row-reverse  flex-wrap justify-start items-start gap-5'>
-                    <span className=' flex-grow w-[23rem] p-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
-                        <h2 className="text-base font-semibold ">نام و نام خانوادگی</h2>
+                    <span className=' flex-grow w-[23rem] py-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
+                        <h2 className="text-base font-medium ">نام و نام خانوادگی</h2>
                         <p className="text-sm font-thin">{userName}</p>
                         <svg onClick={editName} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -175,8 +253,8 @@ export default function UserEditInfo() {
 
 
                     </span>
-                    <span className=' flex-grow w-[23rem] p-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
-                        <h2 className="text-base font-semibold ">کدملی</h2>
+                    <span className=' flex-grow w-[23rem] py-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
+                        <h2 className="text-base font-medium ">کدملی</h2>
                         <p className="text-sm font-thin">{nationalCode}</p>
                         <svg onClick={editNationalCode} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -184,8 +262,8 @@ export default function UserEditInfo() {
 
 
                     </span>
-                    <span className=' flex-grow w-[23rem] p-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
-                        <h2 className="text-base font-semibold ">شماره تلفن همراه</h2>
+                    <span className=' flex-grow w-[23rem] py-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
+                        <h2 className="text-base font-medium ">شماره تلفن همراه</h2>
                         <p className="text-sm font-thin">{phoneNumber}</p>
                         <svg onClick={editPhoneNumber} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -193,8 +271,8 @@ export default function UserEditInfo() {
 
 
                     </span>
-                    <span className=' flex-grow w-[23rem] p-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
-                        <h2 className="text-base font-semibold ">پست الکترونیک</h2>
+                    <span className=' flex-grow w-[23rem] py-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
+                        <h2 className="text-base font-medium ">پست الکترونیک</h2>
                         <p className="text-sm font-thin">{email}</p>
                         <svg onClick={editEmail} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -202,8 +280,8 @@ export default function UserEditInfo() {
 
 
                     </span>
-                    <span className=' flex-grow w-[23rem] p-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
-                        <h2 className="text-base font-semibold ">شماره کارت جهت مرجوع وجه</h2>
+                    <span className=' flex-grow w-[23rem] py-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
+                        <h2 className="text-base font-medium ">شماره کارت جهت مرجوع وجه</h2>
                         <p className="text-sm font-thin">{creditCard}</p>
                         <svg onClick={editCreditCart} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -211,8 +289,8 @@ export default function UserEditInfo() {
 
 
                     </span>
-                    <span className='flex-grow w-[23rem] p-4  flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
-                        <h2 className="text-base font-semibold ">رمز عبور</h2>
+                    <span className='flex-grow w-[23rem] py-4 flex flex-row-reverse item-end justify-between text-right gap-x-5 border-b border-mainPrimaryLight'>
+                        <h2 className="text-base font-medium ">رمز عبور</h2>
                         <p className="text-sm font-thin">{password}</p>
                         <svg onClick={editPassWord} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -224,24 +302,44 @@ export default function UserEditInfo() {
                 </div>
 
             </div>
-            <div className='user-address mb-5'>
+            <div className='user-address my-5'>
                 <h1 className="text-xl text-right font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-2">ادرس من</h1>
                 <div className="w-full grid grid-rows-4 md:grid-rows-2  grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-                    <span className="flex   flex-row-reverse text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
-                        <h2 className="text-lg text-mainPrimary"> : ادرس</h2>
-                        <p className="text-sm text-mainPrimaryLight">فارس، شیراز، بلوار آزادگان، کارخانه نوآوری شیراز،</p>
+                    <span className="flex   flex-row-reverse justify-between text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
+                        <span className='flex items-center flex-row-reverse gap-x-3'>
+                            <h2 className="text-lg text-mainPrimary"> : ادرس</h2>
+                            <p className="text-sm ">{address}</p>
+                        </span>
+                        <svg onClick={editAddress} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
                     </span>
-                    <span className="flex   flex-row-reverse text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
-                        <h2 className="text-lg text-mainPrimary"> : تحویل گیرنده</h2>
-                        <p className="text-sm text-mainPrimaryLight">مصطفی کلانتری</p>
+                    <span className="flex   flex-row-reverse justify-between text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
+                        <span className='flex items-center flex-row-reverse gap-x-3'>
+                            <h2 className="text-lg text-mainPrimary"> : تحویل گیرنده</h2>
+                            <p className="text-sm ">{receiverName}</p>
+                        </span>
+                        <svg onClick={editReceiverName} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
                     </span>
-                    <span className="flex   flex-row-reverse text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
-                        <h2 className="text-lg text-mainPrimary"> :شماره تلفن</h2>
-                        <p className="text-sm text-mainPrimaryLight">09195729509</p>
+                    <span className="flex   flex-row-reverse justify-between text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
+                        <span className='flex items-center flex-row-reverse gap-x-3'>
+                            <h2 className="text-lg text-mainPrimary"> :شماره تلفن</h2>
+                            <p className="text-sm ">{phoneNumber}</p>
+                        </span>
+                        <svg onClick={editPhoneNumber} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
                     </span>
-                    <span className="flex   flex-row-reverse text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
-                        <h2 className="text-lg text-mainPrimary"> : کد پستی</h2>
-                        <p className="text-sm text-mainPrimaryLight">1234567890</p>
+                    <span className="flex   flex-row-reverse justify-between text-right items-end gap-x-3 p-1 pb-3 border-b border-mainPrimary">
+                        <span className='flex items-center flex-row-reverse gap-x-3'>
+                            <h2 className="text-lg text-mainPrimary"> : کد پستی</h2>
+                            <p className="text-sm ">{postalCode}</p>
+                        </span>
+                        <svg onClick={editedPostalCode} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-mainPrimary cursor-pointer">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
                     </span>
                 </div>
 
