@@ -11,6 +11,13 @@ import UserIndex from "./pages/userIndex/userIndex";
 import MainIndex from "./component/UserPanel/MainIndex";
 import UserEditInfo from "./component/UserPanel/UserEditInfo";
 import UserAddress from "./component/UserPanel/UserAddress";
+import AdminIndex from "./pages/AdminPanel/AdminIndex";
+import AdminMainPage from "./pages/AdminPanel/AdminMainPage";
+import AdminUsers from "./pages/AdminPanel/AdminUsers/AdminUsers";
+import AdminProduct from "./pages/AdminPanel/AdminProduct/AdminProduct";
+import AdminArticles from "./pages/AdminPanel/AdminArticles/AdminArticles";
+import AdminOrders from "./pages/AdminPanel/AdminOrders/AdminOrders";
+import AdminComments from "./pages/AdminPanel/AdminComments/AdminComments";
 
 const routes = [
     {
@@ -39,6 +46,17 @@ const routes = [
     },
     {
         path: "/articleList", element: <ArticleList />,
+    },
+    {
+        path: "/admin-panel/*", element: <AdminIndex />, children: [
+            { path: "", element: <AdminMainPage /> },
+            { path: "users", element: <AdminUsers /> },
+            { path: "products", element: <AdminProduct /> },
+            { path: "articles", element: <AdminArticles /> },
+            { path: "orders", element: <AdminOrders /> },
+            { path: "comments", element: <AdminComments /> },
+
+        ]
     },
     {
         path: "/my-account", element: <UserIndex />, children: [
