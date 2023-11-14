@@ -13,6 +13,7 @@ export default {
         mainPrimaryLight: "#1687a7",
         shadowPrimary: "#d3e0ea",
         primaryText: "#f6f5f5",
+      
       },
     },
   },
