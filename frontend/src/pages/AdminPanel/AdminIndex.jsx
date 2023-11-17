@@ -4,7 +4,7 @@ import AdminSideBar from '../../component/AdminPanel/SideBar/AdminSideBar'
 import CmsTopBar from '../../component/CmsTopBar/CmsTopBar'
 export default function AdminIndex() {
     return (
-        <div className='flex flex-row-reverse items-start'>
+        <div className='flex  flex-row-reverse items-start'>
             <span className='w-1/5 min-w-[15rem] h-full'>
                 <AdminSideBar />
             </span>

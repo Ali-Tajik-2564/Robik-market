@@ -39,6 +39,11 @@ export default function AdminSideBar() {
             کامنت ها
           </li>
         </Link>
+        <Link to="offs">
+          <li className='text-primaryText text-lg font-medium p-1 mr-3 hover:text-shadowPrimary'>
+            تخفیف ها
+          </li>
+        </Link>
       </ul>
     </div>
   )

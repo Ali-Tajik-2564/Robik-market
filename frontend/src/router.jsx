@@ -18,6 +18,7 @@ import AdminProduct from "./pages/AdminPanel/AdminProduct/AdminProduct";
 import AdminArticles from "./pages/AdminPanel/AdminArticles/AdminArticles";
 import AdminOrders from "./pages/AdminPanel/AdminOrders/AdminOrders";
 import AdminComments from "./pages/AdminPanel/AdminComments/AdminComments";
+import AdminOffs from "./pages/AdminPanel/AdminOffs/AdminOffs";
 
 const routes = [
     {
@@ -55,6 +56,7 @@ const routes = [
             { path: "articles", element: <AdminArticles /> },
             { path: "orders", element: <AdminOrders /> },
             { path: "comments", element: <AdminComments /> },
+            { path: "offs", element: <AdminOffs /> },
 
         ]
     },
