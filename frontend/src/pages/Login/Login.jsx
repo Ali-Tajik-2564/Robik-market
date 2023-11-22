@@ -1,7 +1,26 @@
 import React from 'react'
 import HeaderPage from '../../component/HeaderPage/HeaderPage'
 import { Link } from 'react-router-dom'
+import { useForm } from '../../Hooks/useForm'
+import Input from '../../component/Input/Input'
+import Button from '../../component/Button/Button'
+import { requiredValidator, minValidator, maxValidator, emailValidator, phoneNumberValidator } from '../../Validators/rules'
 export default function Login() {
+
+    const [formState, onInputHandler] = useForm(
+        {
+            email: {
+                value: "",
+                isValid: false,
+            },
+            password: {
+                value: "",
+                isValid: false,
+            },
+
+        }
+        , false
+    );
     return (
         <div className='w-full  '>
             <HeaderPage title="ورود به ناحیه کاربری" subtitle="وارد ناحیه کاربری خود در روبیک مارکت شوید." route="خانه" />
@@ -14,13 +33,39 @@ export default function Login() {
 
                     <div>
                         <label htmlFor="email" className='text-lg font-thin text-mainPrimaryLight'> : پست الکترونیک </label>
-                        <input type="email" name="email" id="email" className='w-full p-1 px-2 bg-primaryText text-mainPrimary font-medium text-lg border rounded-md shadow-md focus:outline-none focus:shadow-emerald-600 focus:shadow-lg m-1' />
+                        <Input type="email" dir='rtl' name="email" id="email" className='w-full p-1 px-2 bg-primaryText text-mainPrimary font-medium text-lg border rounded-md shadow-md focus:outline-none  m-1'
+                            validations={[
+                                requiredValidator(),
+                                emailValidator()
+                            ]}
+                            onInputHandler={onInputHandler}
+                            element='input'
+                        />
                     </div>
                     <div>
                         <label htmlFor="password" className='text-lg font-thin text-mainPrimaryLight'> :رمز عبور </label>
-                        <input type="text" name="password" id="password" className='w-full p-1 px-2 bg-primaryText text-mainPrimary font-medium text-lg border rounded-md shadow-md focus:outline-none focus:shadow-emerald-600 focus:shadow-lg m-1' />
+                        <Input type="password" dir='rtl' name="password" id="password" className='w-full p-1 px-2 bg-primaryText text-mainPrimary font-medium text-lg border rounded-md shadow-md focus:outline-none  m-1'
+                            validations={[
+                                requiredValidator(),
+                                minValidator(8),
+                                maxValidator(20)
+                            ]}
+                            onInputHandler={onInputHandler}
+                            element='input'
+                        />
                     </div>
-                    <button className="text-lg font-medium mt-4 py-2 px-5 rounded-md bg-mainPrimaryLight text-primaryText hover:bg-mainPrimaryLight/90">ورود</button>
+
+                    <Button
+                        className={`className="text-lg font-medium mt-4 py-2 px-5 rounded-md " ${formState.isFormValid
+                            ? "login-btn-success"
+                            : "login-btn-error"
+                            }`}
+                        type='submit'
+                        //   onClick={useLogin}
+                        disabled={!formState.isFormValid}>
+
+                        <span>ورود</span>
+                    </Button>
                     <p className="text-lg font-medium text-mainPrimaryLight">   ثبت نام نکردید؟ برو به صفحه  <Link to="/register" className='text-mainPrimary text-xl font-bold'> ثبت نام</Link></p>
                 </div>
             </div>
