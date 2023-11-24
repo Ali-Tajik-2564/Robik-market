@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function AdminSideBar() {
   return (
-    <div className='w-full  h-screen sticky top-0 right-0 primary-gradient   text-right'>
+    <div className='w-full  h-screen sticky top-0 right-0 primary-gradient   text-right rounded-l-md'>
       <div className="w-[97%] mx-auto border-b-2 border-mainPrimary h-auto p-3 pb-2 flex items-center justify-between flex-row-reverse">
         <img src=".././images/logo.png" className='w-14 h-12' alt="" />
         <span className="text-xl font-semibold text-primaryText">روبیک مارکت</span>
@@ -42,6 +42,11 @@ export default function AdminSideBar() {
         <Link to="offs">
           <li className='text-primaryText text-lg font-medium p-1 mr-3 hover:text-shadowPrimary'>
             تخفیف ها
+          </li>
+        </Link>
+        <Link to="/">
+          <li className='text-primaryText text-lg font-medium p-1 mr-3 hover:text-shadowPrimary'>
+            خروج
           </li>
         </Link>
       </ul>
