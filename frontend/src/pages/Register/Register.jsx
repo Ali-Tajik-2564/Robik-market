@@ -34,9 +34,9 @@ export default function Register() {
             username: formState.inputs.username.value,
             email: formState.inputs.email.value,
             password: formState.inputs.password.value,
-            confirmPassword: formState.inputs.password.value,
             name: formState.inputs.name.value,
             phone: formState.inputs.phone.value,
+            role: "USER"
         };
         fetch("http://localhost:4000/v1/auth/register", {
             method: "POST",
