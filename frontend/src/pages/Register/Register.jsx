@@ -28,6 +28,40 @@ export default function Register() {
         }
         , false
     );
+    const useRegister = (event) => {
+        event.preventDefault();
+        const newUser = {
+            username: formState.inputs.username.value,
+            email: formState.inputs.email.value,
+            password: formState.inputs.password.value,
+            confirmPassword: formState.inputs.password.value,
+            name: formState.inputs.name.value,
+            phone: formState.inputs.phone.value,
+        };
+        fetch("http://localhost:4000/v1/auth/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newUser),
+        })
+            .then((res) => {
+                if (res.ok) {
+
+                    return res.json()
+
+                } else if (res.status === 403) {
+                    swal({
+                        title: "این شماره تماس بن شده است",
+                        icon: "error",
+                        button: "ای بابا"
+                    })
+
+                }
+            })
+            .then((result) => {
+                console.log(result);
+                authContext.login(result.user, result.accessToken);
+            });
+    };
     return (
         <div className='w-full  '>
             <HeaderPage title="عضویت در سایت" subtitle="با عضویت در سایت از همه امکانات روبیک مارکت بهره مند شوید." route="خانه" />
@@ -89,7 +123,7 @@ export default function Register() {
                             : "login-btn-error"
                             }`}
                         type='submit'
-                        //   onClick={useLogin}
+                        onClick={useRegister}
                         disabled={!formState.isFormValid}>
 
                         <span>ثبت  نام</span>

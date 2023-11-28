@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./MainHeaders.css"
 import { HiShoppingCart } from "react-icons/hi"
 import { BiSearch, BiShoppingBag, BiUserCircle } from "react-icons/bi"
@@ -10,9 +10,11 @@ import { RxCross2 } from "react-icons/Rx"
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaRegAddressCard } from "react-icons/fa"
+import AuthContext from '../../Contexts/AuthContext'
 export default function MainHeaders() {
     const [show, setShow] = useState(false);
 
+    const authContext = useContext(AuthContext);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -275,66 +277,72 @@ export default function MainHeaders() {
                         </div>
 
                     </li>
-                    <li className='main-menu child-hover:transition-all flex lg:hidden child:delay-150 '>
-                        <img src="./images/profile-2.webp" alt="" className='w-12 h-12 rounded-full  object-cover' />
-                        <div className='hidden-menu rounded-t-md left-0 w-36 lg:w-60'>
-                            <ul className="hidden-list">
-                                <li className='hover:text-primaryText'>
-                                    <Link to="/my-account" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
-                                        <BiUserCircle className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
-                                        مشخصات کاربری
+                    {authContext.isLoggedIn ? (
+                        <div> <li className='main-menu child-hover:transition-all flex lg:hidden child:delay-150 '>
+                            <img src="./images/profile-2.webp" alt="" className='w-12 h-12 rounded-full  object-cover' />
+                            <div className='hidden-menu rounded-t-md left-0 w-36 lg:w-60'>
+                                <ul className="hidden-list">
+                                    <li className='hover:text-primaryText'>
+                                        <Link to="/my-account" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                            <BiUserCircle className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
+                                            مشخصات کاربری
 
-                                    </Link>
-                                </li>
-                                <li className='hover:text-primaryText'>
-                                    <Link to="/my-account/my-address" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
-                                        <BiShoppingBag className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
+                                        </Link>
+                                    </li>
+                                    <li className='hover:text-primaryText'>
+                                        <Link to="/my-account/my-address" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                            <BiShoppingBag className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
 
-                                        ادرس ها
+                                            ادرس ها
 
-                                    </Link>
-                                </li>
-                                <li className='hover:text-primaryText'>
-                                    <Link to="/my-account/edit-account" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
-                                        <FaRegAddressCard className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
+                                        </Link>
+                                    </li>
+                                    <li className='hover:text-primaryText'>
+                                        <Link to="/my-account/edit-account" className=' flex flex-row-reverse  items-center justify-end gap-x-1' >
+                                            <FaRegAddressCard className='text-mainPrimary hover:text-primaryText     w-5 h-5' />
 
-                                        ویرایش اطلاعات
-                                    </Link>
-                                </li>
+                                            ویرایش اطلاعات
+                                        </Link>
+                                    </li>
 
 
-                            </ul>
+                                </ul>
+                            </div>
+
+                        </li>
+                            <li className='main-menu child-hover:transition-all hidden lg:flex child:delay-150 '>
+                                <IoIosArrowDown className='down-icon' />
+
+                                پروفایل کاربری
+                                <div className='hidden-menu rounded-t-md'>
+                                    <ul className="hidden-list">
+                                        <li>
+                                            <Link to="/my-account" >
+                                                مشخصات کاربری
+
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/my-account/my-address">
+                                                ادرس ها
+
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/my-account/edit-account">
+                                                ویرایش اطلاعات
+                                            </Link>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
                         </div>
+                    ) : (
+                        <span></span>
+                    )}
 
-                    </li>
-                    <li className='main-menu child-hover:transition-all hidden lg:flex child:delay-150 '>
-                        <IoIosArrowDown className='down-icon' />
-
-                        پروفایل کاربری
-                        <div className='hidden-menu rounded-t-md'>
-                            <ul className="hidden-list">
-                                <li>
-                                    <Link to="/my-account" >
-                                        مشخصات کاربری
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/my-account/my-address">
-                                        ادرس ها
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/my-account/edit-account">
-                                        ویرایش اطلاعات
-                                    </Link>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
                 </ul>
 
             </div >
