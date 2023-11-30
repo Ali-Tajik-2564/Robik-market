@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Input from '../../../component/Input/Input'
 import { useForm } from '../../../Hooks/useForm'
 import Button from '../../../component/Button/Button'
-import { maxValidator, minValidator, requiredValidator } from '../../../Validators/rules'
+import { maxValidator, minValidator, requiredValidator, emailValidator } from '../../../Validators/rules'
 export default function AdminUsers() {
     const [userRole, setUserRole] = useState("")
     const [formState, onInputHandler] = useForm(
@@ -66,9 +66,9 @@ export default function AdminUsers() {
         setUserRole(event.target.value)
     }
     return (
-        <div>
+        <div className='w-[95%] mx-auto p-1 text-right'>
             <div><h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3">اد کردن کاربر</h1>
-                <div className="     my-5 flex flex-row-reverse flex-wrap justify-between items-center gap-y-5">
+                <div className="     my-5 flex flex-row-reverse flex-wrap justify-between items-center gap-5">
                     <div>
                         <label htmlFor="name" className='text-lg font-thin text-mainPrimaryLight'> : نام و نام خانوادگی</label>
 
@@ -88,7 +88,7 @@ export default function AdminUsers() {
                             validations={[
                                 requiredValidator(),
                                 minValidator(11),
-                                phoneNumberValidator()
+
                             ]}
                             onInputHandler={onInputHandler}
                             element='input' />
@@ -115,8 +115,8 @@ export default function AdminUsers() {
                             onInputHandler={onInputHandler}
                             element='input' />
                     </div>
-                    <div>
-                        <label htmlFor="password" className='text-lg font-thin text-mainPrimaryLight'> نقش کاربر</label>
+                    <div className='flex flex-row-reverse gap-x-2'>
+                        <label htmlFor="password" className='text-lg font-thin text-mainPrimaryLight'> : نقش کاربر</label>
                         <select onChange={selectRole}>
 
                             <option value="ADMIN">ادمین</option>
@@ -155,9 +155,9 @@ export default function AdminUsers() {
                             <td>ali.1385.tajik@gmail.com</td>
                             <td>مدیر</td>
                             <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-2 rounded-sm'>
-                                <Link to="/admin-panel/users">
-                                    <button>ادیت</button>
-                                </Link>
+
+                                <button>ادیت</button>
+
                             </td>
                         </tr>
                         <tr className='p-2 text-base font-light  flex justify-between items-center flex-row-reverse'>
@@ -165,9 +165,9 @@ export default function AdminUsers() {
                             <td>ali.1385.tajik@gmail.com</td>
                             <td>مدیر</td>
                             <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-2 rounded-sm'>
-                                <Link to="/admin-panel/users">
-                                    <button>ادیت</button>
-                                </Link>
+
+                                <button>ادیت</button>
+
                             </td>
                         </tr>
                         <tr className='p-2 text-base font-light  flex justify-between items-center flex-row-reverse'>
@@ -175,9 +175,9 @@ export default function AdminUsers() {
                             <td>ali.1385.tajik@gmail.com</td>
                             <td>کاربر</td>
                             <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-2 rounded-sm'>
-                                <Link to="/admin-panel/users">
-                                    <button>ادیت</button>
-                                </Link>
+
+                                <button>ادیت</button>
+
                             </td>
                         </tr>
 

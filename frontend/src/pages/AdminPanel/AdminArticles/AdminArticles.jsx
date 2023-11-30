@@ -41,7 +41,7 @@ export default function AdminArticles() {
         console.log(event);
     }
     return (
-        <div>
+        <div className='w-[95%] mx-auto p-1 text-right'>
             <div>
                 <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3">اضافه کردن مقاله جدید</h1>
                 <div className="     my-5 flex flex-row-reverse flex-wrap justify-between items-center gap-y-5">
@@ -68,7 +68,7 @@ export default function AdminArticles() {
 
 
                     </div>
-                    <div>
+                    <div className='w-1/2 flex flex-col items-end justify-center'>
                         <label htmlFor="name" className='text-lg font-thin text-mainPrimaryLight'> تگ  اصلی مقاله :</label>
 
                         <Input type="text" dir='rtl' name="name" id="tags" className='w-full p-1 px-2 bg-primaryText text-mainPrimary font-medium text-lg border rounded-md shadow-md focus:outline-none  m-1'
@@ -79,7 +79,7 @@ export default function AdminArticles() {
                             onInputHandler={onInputHandler}
                             element='input' />
                     </div>
-                    <div>
+                    <div className='w-1/2 flex flex-col items-end justify-center'>
                         <label htmlFor="name" className='text-lg font-thin text-mainPrimaryLight'> چکیده مقاله : </label>
 
                         <Input type="text" dir='rtl' name="name" id="desc" className='w-full p-1 px-2 bg-primaryText text-mainPrimary font-medium text-lg border rounded-md shadow-md focus:outline-none  m-1'
@@ -89,33 +89,24 @@ export default function AdminArticles() {
 
                             ]}
                             onInputHandler={onInputHandler}
-                            element='input' />
+                        />
                     </div>
-                    <div>
+                    <div className='w-1/2 flex flex-col items-end justify-center'>
                         <Editor value={articleBody} setValue={setArticleBody} />
                     </div>
-                    <Button
-                        className={`className="text-lg font-medium mt-4 py-2 px-5 rounded-md  " ${formState.isFormValid
-                            ? "login-btn-success"
-                            : "login-btn-error"
-                            }`}
-                        type='submit'
-                        onClick={useArticleSaveText}
-                        disabled={!formState.isFormValid}>
+                    <div className='w-1/2 flex flex-col items-end justify-center'>
+                        <Button
+                            className={`className="text-lg font-medium mt-4 py-2 px-5 rounded-md  " ${formState.isFormValid
+                                ? "login-btn-success"
+                                : "login-btn-error"
+                                }`}
+                            type='submit'
+                            onClick={useArticle}
+                            disabled={!formState.isFormValid}>
 
-                        <span>ذخیره متن مقاله</span>
-                    </Button>
-                    <Button
-                        className={`className="text-lg font-medium mt-4 py-2 px-5 rounded-md  " ${formState.isFormValid
-                            ? "login-btn-success"
-                            : "login-btn-error"
-                            }`}
-                        type='submit'
-                        onClick={useArticle}
-                        disabled={!formState.isFormValid}>
-
-                        <span>ثبت  مقاله</span>
-                    </Button>
+                            <span>ثبت  مقاله</span>
+                        </Button>
+                    </div>
                 </div>
             </div>
             <div>
@@ -141,7 +132,7 @@ export default function AdminArticles() {
                             </td>
                             <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-2 rounded-sm'>
 
-                                <button>ذف مقاله</button>
+                                <button>حذف مقاله</button>
 
                             </td>
                         </tr>

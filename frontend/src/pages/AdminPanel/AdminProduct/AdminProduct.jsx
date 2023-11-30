@@ -94,16 +94,7 @@ export default function AdminProduct() {
                 </div>
                 <div className='w-1/2 flex flex-col items-end justify-center'>
                     <label htmlFor="password" className='text-lg font-thin text-mainPrimaryLight'>توضیحات محصول</label>
-                    <div>
-                        <label htmlFor="password" className='text-lg font-thin text-mainPrimaryLight'> گارانتی محصول</label>
-                        <select onChange={selectGarranty}>
 
-                            <option value="3"> 3 ماهه</option>
-                            <option value="6">6 ماهه</option>
-                            <option value="12">1 ساله</option>
-
-                        </select>
-                    </div>
                     <Input type="password" dir='rtl' name="password" id="count" className='w-64 h-44 p-1 px-2 bg-primaryText text-mainPrimary font-medium text-sm border rounded-md shadow-md focus:outline-none  m-1 text-right'
                         validations={[
                             requiredValidator(),
@@ -114,17 +105,29 @@ export default function AdminProduct() {
                         element=''
                     />
                 </div>
-                <Button
-                    className={`className="text-lg font-medium mt-4 py-2 px-5 rounded-md " ${formState.isFormValid
-                        ? "login-btn-success"
-                        : "login-btn-error"
-                        }`}
-                    type='submit'
-                    //   onClick={useLogin}
-                    disabled={!formState.isFormValid}>
+                <div className='w-1/2 flex flex-col items-end justify-center'>
+                    <label htmlFor="password" className='text-lg font-thin text-mainPrimaryLight'> گارانتی محصول</label>
+                    <select onChange={selectGarranty}>
 
-                    <span>ثبت محصول</span>
-                </Button>
+                        <option value="3"> 3 ماهه</option>
+                        <option value="6">6 ماهه</option>
+                        <option value="12">1 ساله</option>
+
+                    </select>
+                </div>
+                <div className='w-1/2 flex flex-col items-end justify-center'>
+                    <Button
+                        className={`className="text-lg font-medium mt-4 py-2 px-5 rounded-md " ${formState.isFormValid
+                            ? "login-btn-success"
+                            : "login-btn-error"
+                            }`}
+                        type='submit'
+                        //   onClick={useLogin}
+                        disabled={!formState.isFormValid}>
+
+                        <span>ثبت محصول</span>
+                    </Button>
+                </div>
             </div>
             <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3 my-4">کل محصولات</h1>
             <table className='w-full my-4 '>
