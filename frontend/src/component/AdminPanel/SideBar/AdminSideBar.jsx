@@ -1,9 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import AuthContext from '../../../Contexts/AuthContext'
+import Swal from 'sweetalert2'
 
 export default function AdminSideBar() {
+  const authContext = useContext(AuthContext)
+  const navigate = useNavigate()
+  const useLogOut = (event) => {
+    event.preventDefault()
+    Swal.fire({
+      title: "خروج شما با موفقیت انجام شد",
+      icon: "success",
+      confirmButtonText: "حله"
+
+    })
+      .then(() => {
+
+        authContext.logout()
+        navigate("/")
+      })
+  }
   return (
-    <div className='w-full  h-screen sticky top-0 right-0 primary-gradient   text-right rounded-l-md'>
+    <div className='w-full  h-screen sticky top-0 right-0    text-right rounded-l-md'>
       <div className="w-[97%] mx-auto border-b-2 border-mainPrimary h-auto p-3 pb-2 flex items-center justify-between flex-row-reverse">
         <img src=".././images/logo.png" className='w-14 h-12' alt="" />
         <span className="text-xl font-semibold text-primaryText">روبیک مارکت</span>
@@ -44,11 +62,11 @@ export default function AdminSideBar() {
             تخفیف ها
           </li>
         </Link>
-        <Link to="/">
-          <li className='text-primaryText text-lg font-medium p-1 mr-3 hover:text-shadowPrimary'>
-            خروج
-          </li>
-        </Link>
+
+        <li className='text-primaryText text-lg font-medium p-1 mr-3 hover:text-shadowPrimary cursor-pointer' onClick={useLogOut}>
+          خروج
+        </li>
+
       </ul>
     </div>
   )

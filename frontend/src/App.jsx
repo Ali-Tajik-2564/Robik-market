@@ -50,13 +50,24 @@ function App() {
         logout,
         isLoggedIn,
       }} >
-
+      {/* {userInfo.role === "USER" ? (
+        <>
+          <TopBar />
+          <MainHeaders />
+        </>
+      ) : ("")} */}
       <TopBar />
-
       <MainHeaders />
+
       {route}
 
       <Footer />
+      {/* {userInfo.role === "USER" ? (
+
+
+        <Footer />
+
+      ) : ("")} */}
     </AuthContext.Provider>
 
   )

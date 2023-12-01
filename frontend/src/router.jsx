@@ -19,7 +19,7 @@ import AdminArticles from "./pages/AdminPanel/AdminArticles/AdminArticles";
 import AdminOrders from "./pages/AdminPanel/AdminOrders/AdminOrders";
 import AdminComments from "./pages/AdminPanel/AdminComments/AdminComments";
 import AdminOffs from "./pages/AdminPanel/AdminOffs/AdminOffs";
-
+import PrivatePAdmin from "./component/Private/PrivatePAdmin"
 const routes = [
     {
         path: "/", element: <Index />,
@@ -49,7 +49,7 @@ const routes = [
         path: "/articleList", element: <ArticleList />,
     },
     {
-        path: "/admin-panel/*", element: <AdminIndex />, children: [
+        path: "/admin-panel/*", element: (<PrivatePAdmin><AdminIndex /></PrivatePAdmin>), children: [
             { path: "", element: <AdminMainPage /> },
             { path: "users", element: <AdminUsers /> },
             { path: "products", element: <AdminProduct /> },

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Input from '../../../component/Input/Input'
 import { useForm } from '../../../Hooks/useForm'
 import Button from '../../../component/Button/Button'
-import { maxValidator, minValidator, requiredValidator } from '../../../Validators/rules'
+import { minValidator, requiredValidator } from '../../../Validators/rules'
 import Editor from '../../../Editor/Editor'
 export default function AdminArticles() {
     const [articleTags, setArticleTags] = useState("")
