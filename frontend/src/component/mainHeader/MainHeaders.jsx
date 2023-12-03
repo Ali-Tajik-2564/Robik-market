@@ -23,7 +23,7 @@ export default function MainHeaders() {
             <div className="top px-2 md:px-10 m-0 gap-x-2 md:gap-x-4 py-3 text-xs md:text-base font-thin md:font-normal w-full inset-0  child:h-8 child:md:h-12">
                 <div className="logo">
                     <span className='logo-title hidden  lg:block'>روبیک مارکت</span>
-                    <img src="../images/logo.png" alt="logo" className='logo-img child:h-8 child:md:h-12' />
+                    <img src="../images/logo-1.png" alt="logo" className='logo-img w-28  child:h-8 child:md:h-10' />
                 </div>
 
                 <div className="search-box px-1 ml-2 md:ml-12">

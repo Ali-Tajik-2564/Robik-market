@@ -37,7 +37,7 @@ export default function Footer() {
 
                     </div>
                     <div className="flex flex-col items-end justify-end w-full lg:w-1/2 h-full gap-3 lg:border-none border-t border-mainPrimary pt-4 lg:first-letter:p-0 ">
-                        <span className='text-lg font-bold flex flex-row-reverse '> <img src="../images/logo.png" alt="" /> روبیک مارکت</span>
+                        <span className='text-lg font-bold flex flex-row-reverse  items-center'> <img src="../images/logo-1.png" alt="" className='w-24' /> روبیک مارکت</span>
 
                         <span className='w-3/3 text-right'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</span>
                         <div className='w-full flex justify-end p-1 leading-9 text-right h-auto text-xl rounded-sm'>
