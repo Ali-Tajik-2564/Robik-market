@@ -34,32 +34,32 @@ export default function AdminOrders() {
                 <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3">سفارشات درحال ارسال</h1>
                 <table className='w-full my-4 '>
                     <thead>
-                        <tr className='p-3 text-lg font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3'>
-                            <td>نام سفارش دهنده</td>
-                            <td>  کد پستی سفارش دهنده </td>
-                            <td>وضعیت سفارش</td>
-                            <td>محصولات سفارش دهنده</td>
-                            <td>ادرس سفارش دهنده</td>
+                        <tr className='p-3 md:text-base text-sm font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3 gap-x-1'>
+                            <td>نام </td>
+                            <td>  کد پستی  </td>
+                            <td>وضعیت </td>
+                            <td>محصولات </td>
+                            <td>ادرس </td>
                             <td>ادیت</td>
                         </tr>
                     </thead>
                     <tbody >
-                        <tr className='p-2 text-base font-light  flex justify-between items-center flex-row-reverse'>
+                        <tr className='p-2 text-xs md:text-sm font-light  flex justify-between items-center flex-row-reverse gap-x-4'>
                             <td>علی تاجیک</td>
                             <td>65656544665456</td>
                             <td>درحال انجام</td>
 
-                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm'>
+                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm text-xs md:text-sm'>
 
                                 <button onClick={showOrders}>مشاهده سفارشات</button>
 
                             </td>
-                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm'>
+                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm text-xs md:text-sm'>
 
                                 <button onClick={showAddress}>مشاهده ادرس</button>
 
                             </td>
-                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm'>
+                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm text-xs md:text-sm'>
 
                                 <button onClick={gettingFactorCode}>سفارش انجام شد</button>
 
@@ -67,8 +67,8 @@ export default function AdminOrders() {
                         </tr>
                         {
                             showOrdersID === 25 ? (
-                                <div className='w-[95%] mx-auto p-1 text-right'>
-                                    <ol className="w-full text-lg flex gap-x-5 flex-col justify-end text-mainPrimaryLight ">
+                                <div className='w-[95%] mx-auto p-1 text-right '>
+                                    <ol className="w-full md:text-base text-sm flex gap-x-5 flex-col justify-end text-mainPrimaryLight ">
                                         <li>سامسونگ A21</li>
                                         <li>سامسونگ A21</li>
                                         <li>سامسونگ A21</li>
@@ -86,17 +86,17 @@ export default function AdminOrders() {
                 <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3">سفارشات  ارسال شده</h1>
                 <table className='w-full my-4 '>
                     <thead>
-                        <tr className='p-3 text-lg font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3'>
-                            <td>نام سفارش دهنده</td>
-                            <td>  کد پستی سفارش دهنده </td>
-                            <td>وضعیت سفارش</td>
+                        <tr className='p-3 md:text-base text-sm font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3'>
+                            <td>نام </td>
+                            <td>  کد پستی  </td>
+                            <td>وضعیت </td>
                             <td>کد فاکتور</td>
-                            <td>محصولات سفارش دهنده</td>
-                            <td>ادرس سفارش دهنده</td>
+                            <td>محصولات </td>
+                            <td>ادرس </td>
                         </tr>
                     </thead>
                     <tbody >
-                        <tr className='p-2 text-base font-light  flex justify-between items-center flex-row-reverse'>
+                        <tr className='p-2 text-xs md:text-sm font-light  flex justify-between items-center flex-row-reverse gap-x-4'>
                             <td>علی تاجیک</td>
                             <td>65656544665456</td>
                             <td>ارسال شده</td>
@@ -106,12 +106,12 @@ export default function AdminOrders() {
                                 2652165
 
                             </td>
-                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm'>
+                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm text-xs md:text-sm'>
 
                                 <button onClick={showOrders}>مشاهده سفارشات</button>
 
                             </td>
-                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm'>
+                            <td className=' bg-mainPrimaryLight hover:bg-mainPrimary text-primaryText p-1 px-1 rounded-sm text-xs md:text-sm'>
 
                                 <button onClick={showAddress}>مشاهده ادرس</button>
 
@@ -119,8 +119,8 @@ export default function AdminOrders() {
                         </tr>
                         {
                             showOrdersID === 25 ? (
-                                <div className='w-[95%] mx-auto p-1 text-right'>
-                                    <ol className="w-full text-lg flex gap-x-5 flex-col justify-end text-mainPrimaryLight ">
+                                <div className='w-[95%] mx-auto p-1 text-right '>
+                                    <ol className="w-full md:text-base text-sm flex gap-x-5 flex-col justify-end text-mainPrimaryLight ">
                                         <li>سامسونگ A21</li>
                                         <li>سامسونگ A21</li>
                                         <li>سامسونگ A21</li>

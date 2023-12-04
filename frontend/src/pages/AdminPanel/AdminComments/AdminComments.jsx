@@ -41,7 +41,7 @@ export default function AdminComments() {
             <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3">  کامنت  ها</h1>
             <table className='w-full my-4 '>
                 <thead>
-                    <tr className='p-3 text-lg font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3'>
+                    <tr className='p-3 text-base md:text-lg font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3'>
                         <td>نام کاربر</td>
                         <td> محصول </td>
                         <td>تعداد ستاره</td>
@@ -51,7 +51,7 @@ export default function AdminComments() {
                     </tr>
                 </thead>
                 <tbody >
-                    <tr className='p-2 text-base font-light  flex justify-between items-center flex-row-reverse'>
+                    <tr className='p-2 text-sm md:text-base font-light  flex justify-between items-center flex-row-reverse'>
                         <td>علی تاجیک</td>
                         <td>گوشی موبایل</td>
                         <td>5</td>

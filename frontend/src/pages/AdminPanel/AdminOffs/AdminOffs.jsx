@@ -47,6 +47,7 @@ export default function AdminOffs() {
                 <h1 className="text-xl font-semibold text-mainPrimary w-full border-b border-mainPrimaryLight pb-3">اضافه کردن تخفیف جدید</h1>
                 <div className="     my-5 flex flex-row-reverse flex-wrap justify-between items-center gap-y-5">
                     <div className='w-1/2 flex flex-col items-end justify-center'>
+                        <label htmlFor="name" className='text-lg font-thin text-mainPrimaryLight'> : نام محصول    </label>
                         <select onChange={selectProductID}>
 
                             <option value="264652">گوشی موبایل</option>
@@ -86,7 +87,7 @@ export default function AdminOffs() {
                 <table className='w-full my-4 '>
                     <thead>
                         <tr className='p-3 text-lg font-medium text-mainPrimary flex justify-between items-center flex-row-reverse border-b-2 mb-3'>
-                            <td>نام محصول تخفیف خورده</td>
+                            <td>نام محصول </td>
                             <td>درصد تخفیف </td>
 
                             <td>ادیت</td>
