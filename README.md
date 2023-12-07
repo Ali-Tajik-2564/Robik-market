@@ -26,6 +26,11 @@ you can watch a live demo of this project
 
 we are a frontend and backend developer whos work as a team name A.Develop .
 
+<img
+  src="./frontend/public/images/logo-1.png"
+  alt="Alt text"
+  title="Optional title"
+  style="width: 200px">
 ## 🔗 Links
 
 Frontend Developer Links :
