@@ -4,22 +4,44 @@ header("Content-Type:application/json");
 
 if (isset($_GET)) {
 
+    if (isset($_GET['id'])) {
+        $bid=$_GET['id'];
+        include('../dbconfig/database.php');
 
-    include('../dbconfig/database.php');
+        $result = $con->prepare("SELECT * FROM `blog` WHERE id=$bid ");
+        $result->execute();
+        $datas = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+        foreach ($datas as $data) {
+            $id = $data['id'];
+            $title = $data['title'];
+            $image = $data['image'];
+            $content = $data['content'];
+            $tags = $data['tags'];
+            response($id, $title, $image, $content, $tags);
+        }
+    }else {
+        include('../dbconfig/database.php');
 
-    $result = $con->prepare("SELECT * FROM `blog` ");
-    $result->execute();
-    $datas = $result->fetchAll(PDO::FETCH_ASSOC);
-
-
-    foreach ($datas as $data) {
-        $id = $data['id'];
-        $title = $data['title'];
-        $image = $data['image'];
-        $content = $data['content'];
-        $tags = $data['tags'];
-        response($id, $title, $image, $content, $tags);
+        $result = $con->prepare("SELECT * FROM `blog` ");
+        $result->execute();
+        $datas = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+        foreach ($datas as $data) {
+            $id = $data['id'];
+            $title = $data['title'];
+            $image = $data['image'];
+            $content = $data['content'];
+            $tags = $data['tags'];
+            response($id, $title, $image, $content, $tags);
+        }
     }
+
+
+
+
 }else {
     response(NULL, NULL, NULL, NULL, NULL, NULL, NULL, 200, "No Record Found");
 }

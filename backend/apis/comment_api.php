@@ -4,21 +4,42 @@ header("Content-Type:application/json");
 
 if (isset($_GET)) {
 
+    if (isset($_GET['id'])) {
+        $cid = $_GET['id'];
 
-    include('../dbconfig/database.php');
+        include('../dbconfig/database.php');
 
-    $result = $con->prepare("SELECT * FROM `comment` ");
-    $result->execute();
-    $datas = $result->fetchAll(PDO::FETCH_ASSOC);
+        $result = $con->prepare("SELECT * FROM `comment` WHERE id=$cid ");
+        $result->execute();
+        $datas = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+        foreach ($datas as $data) {
+            $id = $data['id'];
+            $user = $data['user'];
+            $content = $data['content'];
+            $likes = $data['likes'];
+            response($id, $user, $likes, $content);
+        }
+    }else {
+        include('../dbconfig/database.php');
 
-
-    foreach ($datas as $data) {
-        $id = $data['id'];
-        $user = $data['user'];
-        $content = $data['content'];
-        $likes = $data['likes'];
-        response($id, $user, $likes, $content);
+        $result = $con->prepare("SELECT * FROM `comment` ");
+        $result->execute();
+        $datas = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+        foreach ($datas as $data) {
+            $id = $data['id'];
+            $user = $data['user'];
+            $content = $data['content'];
+            $likes = $data['likes'];
+            response($id, $user, $likes, $content);
+        }
     }
+
+
+
 }else {
     response(NULL, NULL, NULL, NULL, NULL, NULL, NULL, 200, "No Record Found");
 }
