@@ -1,0 +1,16 @@
+available APIs :
+
+https://rubikmarket.iran.liara.run/apis/user_api.php   #user api
+
+https://rubikmarket.iran.liara.run/apis/factor_api.php   #factor api
+
+https://rubikmarket.iran.liara.run/apis/blog_api.php   #blog posts api
+
+https://rubikmarket.iran.liara.run/apis/product_api.php   #products api
+
+https://rubikmarket.iran.liara.run/apis/comment_api.php   #comments api
+
+available parameters :
+
+id => https://rubikmarket.iran.liara.run/apis/user_api.php?id=1
+add a ?id at the end of api link 
