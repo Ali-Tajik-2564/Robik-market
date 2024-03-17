@@ -31,12 +31,9 @@ if (isset($_POST)) {
     $national_Code = $_POST['national_Code'];
     $card_number = $_POST['card_number'];
     $birth_date = $_POST['birth_date'];
+    echo $name;
 
     $result = $con->prepare("INSERT INTO user SET `name`=$name , `password`=$password , `email`=$email , `phone number`=$phone_number , `home number`=$home_number , `national Code` =$national_Code , `card number`=$card_number , `birth date`=$birth_date");
     $result->execute();
     $datas = $result->fetchAll(PDO::FETCH_ASSOC);
-
-    
-
-
 }

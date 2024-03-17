@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin:*");
 header("Content-Type:application/json");
 
 if (isset($_GET)) {
@@ -66,5 +66,6 @@ function response($id, $title, $image, $content, $price, $warranty, $score, $tag
     $response['tags'] = $tags;
     $response['meta'] = $meta;
     $json_response = json_encode($response);
-    echo $json_response;
+    $conc=",";
+    echo $json_response.$conc;
 }

@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin:*");
 header("Content-Type:application/json");
 
 if (isset($_GET)) {
@@ -53,6 +53,9 @@ function response($id, $user, $factor_code, $postal_code, $address)
     $response['factor_code'] = $factor_code;
     $response['postal_code'] = $postal_code;
     $response['address'] = $address;
+    
+    
     $json_response = json_encode($response);
-    echo $json_response;
+    $conc=",";
+    echo $json_response.$conc;
 }
