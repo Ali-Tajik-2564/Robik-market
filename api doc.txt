@@ -1,0 +1,20 @@
+rubick market api doc
+
+APIs list to fecth/insert
+
+blog :
+{title,image,summary,content,tags}
+
+comment :
+{user,content,email,status,pname,pid,date}
+
+orders :
+{name,adress,postal_code,orders,status}
+
+product :
+{title,image,content,price,warranty,category,infos,quanity,off}
+
+user :
+{name,password,email,phone_number,role}
+
+
