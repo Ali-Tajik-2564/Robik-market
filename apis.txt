@@ -1,0 +1,63 @@
+//// available APIs :
+
+https://rubikmarket.iran.liara.run/apis/user_api.php   #user api
+
+https://rubikmarket.iran.liara.run/apis/order_api.php   #factor api
+
+https://rubikmarket.iran.liara.run/apis/blog_api.php   #blog posts api
+
+https://rubikmarket.iran.liara.run/apis/product_api.php   #products api
+
+https://rubikmarket.iran.liara.run/apis/comment_api.php   #comments api
+
+available parameters :
+
+id => https://rubikmarket.iran.liara.run/apis/user_api.php?id=1
+add a ?id at the end of api link 
+
+//// post API 
+
+https://rubikmarket.iran.liara.run/insert/{api}.php    # to add new data 
+
+https://rubikmarket.iran.liara.run/edit/{api}.php    # to edit orders and products
+
+https://rubikmarket.iran.liara.run/delete/{api}.php    # to delete data
+
+
+//// Example :
+
+https://rubikmarket.iran.liara.run/insert/user.php
+
+https://rubikmarket.iran.liara.run/edit/order.php
+
+https://rubikmarket.iran.liara.run/delete/product.php
+
+
+
+//// headers :
+
+Access-Control-Allow-Origin:*
+Content-Type:application/json
+Authorization: Bearer a3Dqdx3TrQfAcxXfTyzlsr7ify5McY4mM0iZ3yXVWo7MZi5xydi96OQL7upGS10d
+
+
+
+parameters :
+
+blog :
+{title,image,summary,content,tags}
+
+
+comment :
+{user,content,email,status,pname,pid,date}
+
+orders :
+{name,adress,postal_code,orders,status}
+can be edited to change status {status}
+
+product :
+{title,image,content,price,warranty,category,infos,quanity,off}
+can be edited to change discount percentage {off}
+
+user :
+{name,password,email,phone_number,role}
