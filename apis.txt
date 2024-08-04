@@ -17,20 +17,20 @@ add a ?id at the end of api link
 
 //// post API 
 
-https://rubikmarket.iran.liara.run/insert/{api}.php    # to add new data 
+https://rubikmarket.iran.liara.run/post/insert/{api}.php    # to add new data 
 
-https://rubikmarket.iran.liara.run/edit/{api}.php    # to edit orders and products
+https://rubikmarket.iran.liara.run/post/edit/{api}.php    # to edit orders and products
 
-https://rubikmarket.iran.liara.run/delete/{api}.php    # to delete data
+https://rubikmarket.iran.liara.run/post/delete/{api}.php    # to delete data
 
 
 //// Example :
 
-https://rubikmarket.iran.liara.run/insert/user.php
+https://rubikmarket.iran.liara.run/post/insert/user.php
 
-https://rubikmarket.iran.liara.run/edit/order.php
+https://rubikmarket.iran.liara.run/post/edit/order.php
 
-https://rubikmarket.iran.liara.run/delete/product.php
+https://rubikmarket.iran.liara.run/post/delete/product.php
 
 
 

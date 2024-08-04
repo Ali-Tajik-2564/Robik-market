@@ -1,18 +1,18 @@
 <?php
 
 header("Access-Control-Allow-Origin:*");
+header('Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS');
 header("Content-Type:application/json");
-header("Authorization: Bearer a3Dqdx3TrQfAcxXfTyzlsr7ify5McY4mM0iZ3yXVWo7MZi5xydi96OQL7upGS10d");
 
 include("../dbconfig/database.php");
 
 if (isset($_POST)) {
 
-  $name = $_GET['name'];
-  $password = $_GET['password'];
-  $email = $_GET['email'];
-  $phone_number = $_GET['phone_number'];
-  $role = $_GET['role'];
+  $name = $_POST['name'];
+  $password = $_POST['password'];
+  $email = $_POST['email'];
+  $phone_number = $_POST['phone_number'];
+  $role = $_POST['role'];
 
   echo $email ;
   echo $name ;

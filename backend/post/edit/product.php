@@ -1,8 +1,8 @@
 <?php
 
 header("Access-Control-Allow-Origin:*");
+header('Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS');
 header("Content-Type:application/json");
-header("Authorization: Bearer a3Dqdx3TrQfAcxXfTyzlsr7ify5McY4mM0iZ3yXVWo7MZi5xydi96OQL7upGS10d");
 
 include("../dbconfig/database.php");
 
